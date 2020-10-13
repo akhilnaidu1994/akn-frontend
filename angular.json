@@ -127,5 +127,8 @@
       }
     }
   },
-  "defaultProject": "akn-ui"
+  "defaultProject": "akn-ui",
+  "cli": {
+    "analytics": false
+  }
 }
