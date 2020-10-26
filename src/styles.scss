@@ -6,10 +6,7 @@
 }
 
 body{
-    background: url('./assets/background.svg');
-    background-repeat: no-repeat;
-    background-position: left;
-    background-size: contain;
+    background: none;
 }
 
 /**
@@ -32,8 +29,7 @@ body{
   justify-content: center;
 
   .login-component {
-    width: 350px;
-    margin-left: 50%;
+    min-width: 350px;
     text-align: center;
 
     .login-card {
@@ -72,4 +68,22 @@ body{
       }
     }
   }
+}
+
+@media (min-width:780px) {
+
+  body {
+    background: url('./assets/background.svg');
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: contain;
+  }
+
+  .login-container {
+    justify-content: flex-end;
+
+    .login-component {
+    margin-right: 3rem;
+    }
+  } 
 }
