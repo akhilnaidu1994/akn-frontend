@@ -83,14 +83,14 @@ body {
 **/
 
 .register-component {
-  height: 85vh;
+  height: 88vh;
   display: flex;
   justify-content: center;
   align-items: center;
 
   .register-card {
-    min-width: 350px;
-    min-height: 420px;
+    width: 350px;
+    min-height: 450px;
     text-align: center;
     padding: 0px;
     border-radius: 10px;
@@ -114,11 +114,41 @@ body {
   }
 
   .content {
-    padding: 15px 25px;
+    padding: 0px 25px;
     margin-bottom: 0px;
+
+    .name {
+      display: flex;
+      justify-content: space-between;
+
+      .first-name-container {
+        display: flex;
+        justify-content: flex-start;
+      }
+
+      .last-name-container {
+        display: flex;
+        justify-content: flex-end;
+      }
+
+
+
+      .fields {
+        width: 95%;
+        text-align: start;
+
+        .mat-form-field-infix {
+          width: auto;
+        }
+      }
+    }
 
     .fields {
       width: 100%;
+
+      .mat-form-field-wrapper {
+        padding-bottom: 1em;
+      }
     }
   }
 
