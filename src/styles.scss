@@ -5,8 +5,13 @@
   padding: 0;
 }
 
-body{
-    background: none;
+body {
+  background: none;
+  height: 100vh;
+}
+
+.active-link {
+  display: none !important;
 }
 
 /**
@@ -14,8 +19,8 @@ body{
 **/
 
 .header {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 /**
@@ -35,45 +40,92 @@ body{
     .login-card {
       padding: 0px;
       border-radius: 10px;
-      box-shadow: -1px -2px 5px 0px rgba(0,0,0,0.50);
+      box-shadow: -1px -2px 5px 0px rgba(0, 0, 0, 0.5);
 
       .header {
         background-color: #673ab7;
         padding: 15px;
         margin-bottom: 10px;
         border-radius: 15px;
-        width:80%;
+        width: 80%;
         position: relative;
-        bottom:25px;
+        bottom: 25px;
         margin: auto;
 
         .mat-card-header-text {
           margin: auto;
           color: white;
         }
-
       }
 
       .content {
-          padding: 15px 25px;
-          margin-bottom: 0px;
+        padding: 15px 25px;
+        margin-bottom: 0px;
 
-          .fields {
-            width: 100%;
-          }
+        .fields {
+          width: 100%;
+        }
       }
 
       .footer-buttons {
-          padding-bottom: 25px;
+        padding-bottom: 25px;
       }
     }
   }
 }
 
-@media (min-width:780px) {
+/**
+  Register component styles
+**/
 
+.register-component {
+  height: 85vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .register-card {
+    min-width: 350px;
+    min-height: 420px;
+    text-align: center;
+    padding: 0px;
+    border-radius: 10px;
+    box-shadow: -1px -2px 5px 0px rgba(0, 0, 0, 0.5);
+  }
+
+  .header {
+    background-color: #673ab7;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    width: 80%;
+    position: relative;
+    bottom: 25px;
+    margin: auto;
+
+    .mat-card-header-text {
+      margin: auto;
+      color: white;
+    }
+  }
+
+  .content {
+    padding: 15px 25px;
+    margin-bottom: 0px;
+
+    .fields {
+      width: 100%;
+    }
+  }
+
+  .footer-buttons {
+    padding-bottom: 25px;
+  }
+}
+
+@media (min-width: 780px) {
   body {
-    background: url('./assets/background.svg');
+    background: url("./assets/background.svg");
     background-repeat: no-repeat;
     background-position: left;
     background-size: contain;
@@ -83,7 +135,15 @@ body{
     justify-content: flex-end;
 
     .login-component {
-    margin-right: 3rem;
+      margin-right: 3rem;
     }
-  } 
+  }
+
+  .register-component {
+    justify-content: flex-end;
+
+    .register-card {
+      margin-right: 3rem;
+    }
+  }
 }

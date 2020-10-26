@@ -1,5 +1,7 @@
 <mat-toolbar class="header" color="primary">
     <h3>Task Manager</h3>
-    <button mat-button>Register</button>
+    <button routerLink="/" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active-link"
+        mat-button>Login</button>
+    <button routerLink="/register" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active-link"
+        mat-button>Register</button>
 </mat-toolbar>
-

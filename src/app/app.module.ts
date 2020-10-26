@@ -8,12 +8,14 @@ import { MaterialModule } from './material/material/material.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { HeaderComponent } from './components/header/header.component';
 import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    LoginComponent
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
