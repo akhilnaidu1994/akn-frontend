@@ -1,12 +1,18 @@
 import { Component, OnInit } from "@angular/core";
 import {
+  AbstractControl,
   FormBuilder,
   FormControl,
   FormGroup,
+  FormGroupDirective,
   ValidationErrors,
   ValidatorFn,
   Validators,
 } from "@angular/forms";
+import { MatSnackBar, MatSnackBarHorizontalPosition, MatSnackBarVerticalPosition } from '@angular/material/snack-bar';
+import { Router } from '@angular/router';
+import { User } from 'src/app/model/interfaces';
+import { UserService } from 'src/app/services/user.service';
 
 export const passwordMatchValidator: ValidatorFn = (
   control: FormGroup
@@ -28,7 +34,11 @@ export const passwordMatchValidator: ValidatorFn = (
   styleUrls: ["./register.component.scss"],
 })
 export class RegisterComponent implements OnInit {
-  constructor(private fb: FormBuilder) {}
+  constructor(
+    private fb: FormBuilder,
+    private userService: UserService,
+    private snackBar: MatSnackBar,
+    private router: Router) { }
 
   registerForm = this.fb.group(
     {
@@ -38,12 +48,42 @@ export class RegisterComponent implements OnInit {
       password: ["", [Validators.required, Validators.minLength(5)]],
       confirmPassword: ["", [Validators.required, Validators.minLength(5)]],
     },
-    { validators: passwordMatchValidator, updateOn: "blur" }
+    { validators: passwordMatchValidator, updateOn: 'blur' }
   );
 
-  ngOnInit(): void {}
+  private horizontalPosition: MatSnackBarHorizontalPosition = 'center';
+  private verticalPosition: MatSnackBarVerticalPosition = 'bottom';
 
-  onSubmit() {}
+  ngOnInit(): void {
+  }
+
+  onSubmit(formDirective: FormGroupDirective) {
+    if (this.registerForm.valid) {
+
+      const user: User = {
+        firstName: this.firstName.value,
+        lastName: this.lastName.value,
+        email: this.email.value,
+        password: this.password.value
+      }
+
+      this.userService.registerUser(user).subscribe(registeredUser => {
+        this.resetForm(formDirective);
+        this.snackBar.open("Registration Successful. You can login now", "", {
+          duration: 5000,
+          horizontalPosition: this.horizontalPosition,
+          verticalPosition: this.verticalPosition
+        });
+      });
+
+      this.router.navigate(['/']);
+    }
+  }
+
+  resetForm(formDirective: FormGroupDirective) {
+    formDirective.resetForm();
+    this.registerForm.reset();
+  }
 
   get firstName() {
     return this.registerForm.get("firstName");
@@ -63,5 +103,9 @@ export class RegisterComponent implements OnInit {
 
   get confirmPassword() {
     return this.registerForm.get("confirmPassword");
+  }
+
+  setNullErrors(formControl: AbstractControl) {
+    formControl.setErrors(null);
   }
 }

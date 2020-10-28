@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: false,
+  baseUrl: 'https://akn-taskmanager.herokuapp.com'
 };
