@@ -1,27 +1,32 @@
 <div class="login-container">
-    <div class="login-component">
-        <mat-card class="login-card">
-            <mat-card-header class="header">
-                <mat-card-title>Login</mat-card-title>
-            </mat-card-header>
-            <mat-card-content class="content">
-                <p>
-                    <mat-form-field class="fields" appearance="outline">
-                        <mat-label>Email</mat-label>
-                        <input type="text" matInput placeholder="Email">
-                    </mat-form-field>
-                </p>
-                <p>
-                    <mat-form-field class="fields" appearance="outline">
-                        <mat-label>Password</mat-label>
-                        <input type="password" matInput placeholder="Password">
-                    </mat-form-field>
-                </p>
-            </mat-card-content>
-            <mat-card-actions class="footer-buttons">
-                <button mat-raised-button color="primary">Submit</button>
-                <button class="reset-button" mat-stroked-button color="primary">Reset</button>
-            </mat-card-actions>
-        </mat-card>
-    </div>
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <div class="login-component">
+            <mat-card class="login-card">
+                <mat-card-header class="header">
+                    <mat-card-title>Login</mat-card-title>
+                </mat-card-header>
+                <mat-card-content class="content">
+                    <p>
+                        <mat-form-field class="fields" appearance="outline">
+                            <mat-label>Email</mat-label>
+                            <input type="text" formControlName="email" (focus)="setNullErrors(email)" matInput placeholder="Email">
+                            <mat-error *ngIf="email.errors?.required">Email is required</mat-error>
+                            <mat-error *ngIf="email.errors?.email">Email is invalid</mat-error>
+                        </mat-form-field>
+                    </p>
+                    <p>
+                        <mat-form-field class="fields" appearance="outline">
+                            <mat-label>Password</mat-label>
+                            <input type="password" formControlName="password" (focus)="setNullErrors(password)" matInput placeholder="Password">
+                            <mat-error *ngIf="password.errors?.required">Password is required</mat-error>
+                        </mat-form-field>
+                    </p>
+                </mat-card-content>
+                <mat-card-actions class="footer-buttons">
+                    <button type="submit" mat-raised-button color="primary">Submit</button>
+                    <button type="reset" class="reset-button" mat-stroked-button color="primary">Reset</button>
+                </mat-card-actions>
+            </mat-card>
+        </div>
+    </form>
 </div>
