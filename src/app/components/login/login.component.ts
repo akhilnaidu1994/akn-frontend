@@ -32,7 +32,6 @@ export class LoginComponent implements OnInit {
   onSubmit() {
     if (this.loginForm.valid) {
       this.userService.login(this.loginForm.value).subscribe(data => {
-        this.loginForm.reset();
         this.router.navigate(['/home']);
       }, err => {
         if (err.status === 403) {
