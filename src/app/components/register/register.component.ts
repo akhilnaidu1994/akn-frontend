@@ -69,15 +69,25 @@ export class RegisterComponent implements OnInit {
 
       this.userService.registerUser(user).subscribe(registeredUser => {
         this.resetForm(formDirective);
-        this.snackBar.open("Registration Successful. You can login now", "", {
-          duration: 5000,
-          horizontalPosition: this.horizontalPosition,
-          verticalPosition: this.verticalPosition
-        });
+        this.openSnackBar("Registration Successful. You can login now");
+        this.router.navigate(['/']);
+      }, err => {
+        if (err.status === 409) {
+          this.router.navigate(['/']);
+          this.openSnackBar("User already registered !!! Please login");
+        } else {
+          this.openSnackBar("Something went wrong.. Please try again later !!!");
+        }
       });
-
-      this.router.navigate(['/']);
     }
+  }
+
+  openSnackBar(message: string) {
+    this.snackBar.open(message, "", {
+      duration: 5000,
+      horizontalPosition: this.horizontalPosition,
+      verticalPosition: this.verticalPosition
+    });
   }
 
   resetForm(formDirective: FormGroupDirective) {

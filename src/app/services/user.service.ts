@@ -1,5 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+import { observeOn, tap } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
 import { User } from '../model/interfaces';
 
@@ -10,9 +12,37 @@ export class UserService {
 
   private baseUrl = environment.baseUrl;
 
+  private jwtToken: string = null;
+
+  private refreshToken: string = null;
+
   constructor(private http: HttpClient) { }
 
-  public registerUser(user: User){
-    return this.http.post<User>(`${this.baseUrl}/user/register`,user);
+  public registerUser(user: User) {
+    return this.http.post<User>(`${this.baseUrl}/user/register`, user);
+  }
+
+  public login(user: User) {
+    console.log(user);
+    return this.http
+      .post(`${this.baseUrl}/login`, user, { observe: 'response' })
+      .pipe(
+        tap(response => {
+          this.jwtToken = response.headers.get('token');
+          this.refreshToken = response.headers.get('refresh_token');
+        })
+      );
+  }
+
+  get getJwtToken() {
+    return this.jwtToken;
+  }
+
+  get regreshToken() {
+    return this.refreshToken;
+  }
+
+  get isLoggedIn() {
+    return (this.jwtToken) ? true : false;
   }
 }
