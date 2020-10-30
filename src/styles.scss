@@ -217,6 +217,10 @@ body {
         flex-basis: 15%;
         align-self: center;
         margin-left: 10px;
+
+        .logout-button {
+            color: #FFFFFF;
+        }
     }
 
     .dashboard-content {
