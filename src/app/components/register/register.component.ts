@@ -69,10 +69,10 @@ export class RegisterComponent implements OnInit {
       this.userService.registerUser(user).subscribe(registeredUser => {
         this.resetForm(formDirective);
         this.openSnackBar("Registration Successful. You can login now");
-        this.router.navigate(['/']);
+        this.router.navigate(['/login']);
       }, err => {
         if (err.status === 409) {
-          this.router.navigate(['/']);
+          this.router.navigate(['/login']);
           this.openSnackBar("User already registered !!! Please login");
         } else {
           this.openSnackBar("Something went wrong.. Please try again later !!!");

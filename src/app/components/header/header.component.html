@@ -1,11 +1,7 @@
 <mat-toolbar class="header" color="primary">
     <h3>Task Manager</h3>
-    <ng-container *ngIf="!isLoggedIn">
-        <button routerLink="/" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active-link" mat-button>Login</button>
-        <button routerLink="/register" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active-link" mat-button>Register</button>
-    </ng-container>
-    <ng-container *ngIf="isLoggedIn">
-        <button mat-button (click)="logout()">Logout</button>
-    </ng-container>
-
+    <button routerLink="/login" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active-link" mat-button>Login</button>
+    <button routerLink="/register" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active-link" mat-button>Register</button>
 </mat-toolbar>
+
+<router-outlet></router-outlet>

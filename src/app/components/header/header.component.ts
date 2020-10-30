@@ -11,21 +11,13 @@ export class HeaderComponent implements OnInit {
 
   isLoggedIn: boolean;
 
-  constructor(private router: Router, private userService: UserService) { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
-    this.userService.isLoggedInObservable.subscribe(loggenIn => {
-      this.isLoggedIn = loggenIn;
-    });
   }
 
   public openRegister() {
     this.router.navigate(['/register']);
-  }
-
-  public logout() {
-    this.userService.logout();
-    this.router.navigate(['']);
   }
 
 }
