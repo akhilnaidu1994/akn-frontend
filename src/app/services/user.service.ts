@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 import { observeOn, tap } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
 import { User } from '../model/interfaces';
@@ -16,6 +16,8 @@ export class UserService {
 
   private refreshToken: string = null;
 
+  private $isLoggedInSubject = new BehaviorSubject<boolean>(false);
+
   constructor(private http: HttpClient) { }
 
   public registerUser(user: User) {
@@ -30,8 +32,15 @@ export class UserService {
         tap(response => {
           this.jwtToken = response.headers.get('token');
           this.refreshToken = response.headers.get('refresh_token');
+          this.$isLoggedInSubject.next(true);
         })
       );
+  }
+
+  public logout() {
+    this.jwtToken = null;
+    this.refreshToken = null;
+    this.$isLoggedInSubject.next(false);
   }
 
   get getJwtToken() {
@@ -44,5 +53,9 @@ export class UserService {
 
   get isLoggedIn() {
     return (this.jwtToken) ? true : false;
+  }
+
+  get isLoggedInObservable() {
+    return this.$isLoggedInSubject.asObservable();
   }
 }
