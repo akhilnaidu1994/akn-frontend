@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable } from 'rxjs';
-import { observeOn, tap } from 'rxjs/operators';
+import { BehaviorSubject } from 'rxjs';
+import { tap } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
 import { User } from '../model/interfaces';
 
@@ -18,7 +18,12 @@ export class UserService {
 
   private $isLoggedInSubject = new BehaviorSubject<boolean>(false);
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {
+    this.jwtToken = localStorage.getItem('token');
+    this.refreshToken = localStorage.getItem('refresh_token');
+    if (this.jwtToken && this.refreshToken)
+      this.$isLoggedInSubject.next(true);
+  }
 
   public registerUser(user: User) {
     return this.http.post<User>(`${this.baseUrl}/user/register`, user);
@@ -33,6 +38,8 @@ export class UserService {
           this.jwtToken = response.headers.get('token');
           this.refreshToken = response.headers.get('refresh_token');
           this.$isLoggedInSubject.next(true);
+          localStorage.setItem("token", this.jwtToken);
+          localStorage.setItem("refresh_token", this.refreshToken);
         })
       );
   }
@@ -40,6 +47,8 @@ export class UserService {
   public logout() {
     this.jwtToken = null;
     this.refreshToken = null;
+    localStorage.removeItem('token');
+    localStorage.removeItem('refresh_token');
     this.$isLoggedInSubject.next(false);
   }
 

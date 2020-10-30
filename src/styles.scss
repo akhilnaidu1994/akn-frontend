@@ -1,17 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
 
 * {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-  background: none;
-  height: 100vh;
+    background: none;
+    height: 100vh;
 }
 
 .active-link {
-  display: none !important;
+    display: none !important;
 }
 
 /**
@@ -19,8 +19,8 @@ body {
 **/
 
 .header {
-  display: flex;
-  justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
 }
 
 /**
@@ -28,21 +28,76 @@ body {
 */
 
 .login-container {
-  height: 80vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-  .login-component {
-    min-width: 350px;
-    text-align: center;
+    .login-component {
+        min-width: 350px;
+        text-align: center;
 
-    .login-card {
-      padding: 0px;
-      border-radius: 10px;
-      box-shadow: -1px -2px 5px 0px rgba(0, 0, 0, 0.5);
+        .login-card {
+            padding: 0px;
+            border-radius: 10px;
+            box-shadow: -1px -2px 5px 0px rgba(0, 0, 0, 0.5);
 
-      .header {
+            .header {
+                background-color: #673ab7;
+                padding: 15px;
+                margin-bottom: 10px;
+                border-radius: 15px;
+                width: 80%;
+                position: relative;
+                bottom: 25px;
+                margin: auto;
+
+                .mat-card-header-text {
+                    margin: auto;
+                    color: white;
+                }
+            }
+
+            .content {
+                padding: 15px 25px;
+                margin-bottom: 0px;
+
+                .fields {
+                    width: 100%;
+                }
+            }
+
+            .footer-buttons {
+                padding-bottom: 25px;
+
+                .reset-button {
+                    border: #673ab7 1px solid;
+                }
+            }
+        }
+    }
+}
+
+/**
+  Register component styles
+**/
+
+.register-component {
+    height: 88vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .register-card {
+        width: 350px;
+        min-height: 450px;
+        text-align: center;
+        padding: 0px;
+        border-radius: 10px;
+        box-shadow: -1px -2px 5px 0px rgba(0, 0, 0, 0.5);
+    }
+
+    .header {
         background-color: #673ab7;
         padding: 15px;
         margin-bottom: 10px;
@@ -53,135 +108,82 @@ body {
         margin: auto;
 
         .mat-card-header-text {
-          margin: auto;
-          color: white;
+            margin: auto;
+            color: white;
         }
-      }
+    }
 
-      .content {
-        padding: 15px 25px;
+    .content {
+        padding: 0px 25px;
         margin-bottom: 0px;
 
-        .fields {
-          width: 100%;
-        }
-      }
+        .name {
+            display: flex;
+            justify-content: space-between;
 
-      .footer-buttons {
+            .first-name-container {
+                display: flex;
+                justify-content: flex-start;
+            }
+
+            .last-name-container {
+                display: flex;
+                justify-content: flex-end;
+            }
+
+
+
+            .fields {
+                width: 95%;
+                text-align: start;
+
+                .mat-form-field-infix {
+                    width: auto;
+                }
+            }
+        }
+
+        .fields {
+            width: 100%;
+
+            .mat-form-field-wrapper {
+                padding-bottom: 1em;
+            }
+        }
+    }
+
+    .footer-buttons {
         padding-bottom: 25px;
 
         .reset-button {
-          border: #673ab7 1px solid;
+            border: #673ab7 1px solid;
         }
-      }
     }
-  }
-}
-
-/**
-  Register component styles
-**/
-
-.register-component {
-  height: 88vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  .register-card {
-    width: 350px;
-    min-height: 450px;
-    text-align: center;
-    padding: 0px;
-    border-radius: 10px;
-    box-shadow: -1px -2px 5px 0px rgba(0, 0, 0, 0.5);
-  }
-
-  .header {
-    background-color: #673ab7;
-    padding: 15px;
-    margin-bottom: 10px;
-    border-radius: 15px;
-    width: 80%;
-    position: relative;
-    bottom: 25px;
-    margin: auto;
-
-    .mat-card-header-text {
-      margin: auto;
-      color: white;
-    }
-  }
-
-  .content {
-    padding: 0px 25px;
-    margin-bottom: 0px;
-
-    .name {
-      display: flex;
-      justify-content: space-between;
-
-      .first-name-container {
-        display: flex;
-        justify-content: flex-start;
-      }
-
-      .last-name-container {
-        display: flex;
-        justify-content: flex-end;
-      }
-
-
-
-      .fields {
-        width: 95%;
-        text-align: start;
-
-        .mat-form-field-infix {
-          width: auto;
-        }
-      }
-    }
-
-    .fields {
-      width: 100%;
-
-      .mat-form-field-wrapper {
-        padding-bottom: 1em;
-      }
-    }
-  }
-
-  .footer-buttons {
-    padding-bottom: 25px;
-
-    .reset-button {
-      border: #673ab7 1px solid;
-    }
-  }
 }
 
 @media (min-width: 780px) {
-  body {
-    background: url("./assets/background.svg");
-    background-repeat: no-repeat;
-    background-position: left;
-    background-size: contain;
-  }
 
-  .login-container {
-    justify-content: flex-end;
-
-    .login-component {
-      margin-right: 3rem;
+    .login-container,
+    .register-component {
+        background: url("./assets/background.svg");
+        background-repeat: no-repeat;
+        background-position: left;
+        background-size: contain;
     }
-  }
 
-  .register-component {
-    justify-content: flex-end;
+    .login-container {
+        justify-content: flex-end;
 
-    .register-card {
-      margin-right: 3rem;
+        .login-component {
+            margin-right: 3rem;
+        }
     }
-  }
+
+    .register-component {
+        justify-content: flex-end;
+
+        .register-card {
+            margin-right: 3rem;
+        }
+    }
 }

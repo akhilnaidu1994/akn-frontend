@@ -1,4 +1,4 @@
-<form [formGroup]="registerForm" #formDirective="ngForm" (ngSubmit)="onSubmit(formDirective)" autocomplete="off" class="register-component">
+<form [formGroup]="registerForm" #formDirective="ngForm" (ngSubmit)="onSubmit(formDirective)" autocomplete="false" class="register-component">
     <mat-card class="register-card">
         <mat-card-header class="header">
             <mat-card-title>Register</mat-card-title>
@@ -8,7 +8,7 @@
                 <p class="first-name-container">
                     <mat-form-field class="fields" appearance="outline">
                         <mat-label>First Name</mat-label>
-                        <input type="text" (focus)="setNullErrors(firstName)" formControlName="firstName" matInput placeholder="First Name">
+                        <input type="text" (focus)="setNullErrors(firstName)" formControlName="firstName" autocomplete="off" matInput placeholder="First Name">
                         <mat-error *ngIf="firstName.touched && firstName.errors?.required">First Name is required</mat-error>
                         <mat-error *ngIf="firstName.touched && firstName.errors?.minlength">Minimum length is 3</mat-error>
                     </mat-form-field>
