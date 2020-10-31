@@ -30,7 +30,6 @@ export class UserService {
   }
 
   public login(user: User) {
-    console.log(user);
     return this.http
       .post(`${this.baseUrl}/login`, user, { observe: 'response' })
       .pipe(
@@ -42,6 +41,10 @@ export class UserService {
           localStorage.setItem("refresh_token", this.refreshToken);
         })
       );
+  }
+
+  public getUser() {
+    return this.http.get<User>(`${this.baseUrl}/user`);
   }
 
   public logout() {

@@ -6,8 +6,12 @@
     </nav>
     <div class="dashboard-content">
         <h2 class="mat-display-1">Dashboard</h2>
-        <div class="user-info">
-            <h2 class="mat-subheading-2">Welcome back, Akhil </h2>
+        <div class="user-info" *ngIf="user; else errorScreen">
+            <h2 class="mat-subheading-2">Welcome back, {{user.firstName}} </h2>
         </div>
     </div>
 </div>
+
+<ng-template #errorScreen>
+    <h2 class="mat-subheading-2">We are having some difficulty loading your information </h2>
+</ng-template>
