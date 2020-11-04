@@ -1,7 +1,7 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
-import { tap } from 'rxjs/operators';
+import { BehaviorSubject, Observable } from 'rxjs';
+import { catchError, tap } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
 import { User } from '../model/interfaces';
 
@@ -47,6 +47,19 @@ export class UserService {
     return this.http.get<User>(`${this.baseUrl}/user`);
   }
 
+  public refreshUserToken() {
+
+    const headers = new HttpHeaders();
+    headers.set('Content-Type', 'text/plain; charset=utf-8');
+    return this.http
+      .post(`${this.baseUrl}/user/token/refresh`, {}, { headers, responseType: 'text' })
+      .pipe(
+        tap(data => this.jwtToken = data),
+        tap(data => localStorage.setItem('token', data)),
+        catchError(err => { this.logout(); return err })
+      );
+  }
+
   public logout() {
     this.jwtToken = null;
     this.refreshToken = null;
@@ -59,7 +72,7 @@ export class UserService {
     return this.jwtToken;
   }
 
-  get regreshToken() {
+  get getRefreshToken() {
     return this.refreshToken;
   }
 

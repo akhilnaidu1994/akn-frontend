@@ -1,13 +1,55 @@
 <div class="dashboard-main">
     <nav class="dashboard-side">
         <div class="items">
-            <button class="logout-button" mat-button (click)="logout()">Logout</button>
+            <div class="item">
+                <i class="fas fa-chart-line"></i>
+                <button class="button" mat-button>Dashboard</button>
+            </div>
+            <div class="item">
+                <i class="fas fa-tasks"></i>
+                <button class="button" mat-button>Tasks</button>
+            </div>
+            <div class="item">
+                <i class="fas fa-atlas"></i>
+                <button class="button" mat-button>Projects</button>
+            </div>
+            <div class="item">
+                <i class="fas fa-sign-out-alt"></i>
+                <button class="button" mat-button (click)="logout()">Logout</button>
+            </div>
         </div>
     </nav>
     <div class="dashboard-content">
-        <h2 class="mat-display-1">Dashboard</h2>
+        <div class="dashboard-title">
+            <h2 class="mat-display-1">Dashboard</h2>
+        </div>
         <div class="user-info" *ngIf="user; else errorScreen">
             <h2 class="mat-subheading-2">Welcome back, {{user.firstName}} </h2>
+            <h4 class="mat-subheading-1">You have 10 task to finish today.</h4>
+            <button mat-raised-button color="primary">check now</button>
+        </div>
+        <div class="projects-content">
+            <div class="heading">
+                <h4 class="mat-subheading-2">Your projects.</h4>
+                <button mat-button class="button">View all</button>
+            </div>
+            <div class="projects">
+                <div class="project-description">
+                    <h3>Implement A</h3>
+                    <span>No of tasks : 3</span>
+                    <p class="project-summary"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat consequatur</p>
+                </div>
+                <div class="project-description">
+                    <h3>Implement B</h3>
+                    <span>No of tasks : 3</span>
+                    <p class="project-summary"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat consequatur</p>
+                </div>
+                <div class="project-description">
+                    <h3>Implement C</h3>
+                    <span>No of tasks : 3</span>
+                    <p class="project-summary"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat consequatur</p>
+                </div>
+            </div>
         </div>
     </div>
 </div>
