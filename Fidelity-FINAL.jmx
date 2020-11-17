@@ -1,0 +1,1327 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.3">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Fidelity FINAL" enabled="true">
+      <stringProp name="TestPlan.comments">This test plan was created by the BlazeMeter converter v.2.3.17. Please contact support@blazemeter.com for further support.</stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" enabled="true">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+        <collectionProp name="HeaderManager.headers">
+          <elementProp name="User-Agent" elementType="Header">
+            <stringProp name="Header.name">User-Agent</stringProp>
+            <stringProp name="Header.value">Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36</stringProp>
+          </elementProp>
+        </collectionProp>
+      </HeaderManager>
+      <hashTree/>
+      <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="BASE_URL_1" elementType="Argument">
+            <stringProp name="Argument.name">BASE_URL_1</stringProp>
+            <stringProp name="Argument.value">qa.fidelitydebitcard.com</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="BASE_URL_2" elementType="Argument">
+            <stringProp name="Argument.name">BASE_URL_2</stringProp>
+            <stringProp name="Argument.value">dpservicexq2.fidelity.com</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="BASE_URL_3" elementType="Argument">
+            <stringProp name="Argument.name">BASE_URL_3</stringProp>
+            <stringProp name="Argument.value">loginxq1.fidelity.com</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="BASE_URL_4" elementType="Argument">
+            <stringProp name="Argument.name">BASE_URL_4</stringProp>
+            <stringProp name="Argument.value">activate1.fidelity.com</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="BASE_URL_5" elementType="Argument">
+            <stringProp name="Argument.name">BASE_URL_5</stringProp>
+            <stringProp name="Argument.value">apigateway.qa.bnymellon.com</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+        </collectionProp>
+      </Arguments>
+      <hashTree/>
+      <ConfigTestElement guiclass="HttpDefaultsGui" testclass="ConfigTestElement" testname="HTTP Request Defaults" enabled="true">
+        <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+          <collectionProp name="Arguments.arguments"/>
+        </elementProp>
+        <stringProp name="HTTPSampler.domain"></stringProp>
+        <stringProp name="HTTPSampler.port"></stringProp>
+        <stringProp name="HTTPSampler.protocol"></stringProp>
+        <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+        <stringProp name="HTTPSampler.path"></stringProp>
+        <boolProp name="HTTPSampler.image_parser">true</boolProp>
+        <boolProp name="HTTPSampler.concurrentDwn">true</boolProp>
+        <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+        <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+        <stringProp name="HTTPSampler.response_timeout"></stringProp>
+      </ConfigTestElement>
+      <hashTree/>
+      <DNSCacheManager guiclass="DNSCachePanel" testclass="DNSCacheManager" testname="DNS Cache Manager" enabled="true">
+        <collectionProp name="DNSCacheManager.servers"/>
+        <boolProp name="DNSCacheManager.clearEachIteration">true</boolProp>
+        <boolProp name="DNSCacheManager.isCustomResolver">false</boolProp>
+      </DNSCacheManager>
+      <hashTree/>
+      <AuthManager guiclass="AuthPanel" testclass="AuthManager" testname="HTTP Authorization Manager" enabled="true">
+        <collectionProp name="AuthManager.auth_list"/>
+        <boolProp name="AuthManager.controlledByThreadGroup">false</boolProp>
+      </AuthManager>
+      <hashTree/>
+      <CookieManager guiclass="CookiePanel" testclass="CookieManager" testname="HTTP Cookie Manager" enabled="true">
+        <collectionProp name="CookieManager.cookies"/>
+        <boolProp name="CookieManager.clearEachIteration">true</boolProp>
+        <boolProp name="CookieManager.controlledByThreadGroup">false</boolProp>
+      </CookieManager>
+      <hashTree/>
+      <CacheManager guiclass="CacheManagerGui" testclass="CacheManager" testname="HTTP Cache Manager" enabled="true">
+        <boolProp name="clearEachIteration">true</boolProp>
+        <boolProp name="useExpires">false</boolProp>
+        <boolProp name="CacheManager.controlledByThread">false</boolProp>
+      </CacheManager>
+      <hashTree/>
+      <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
+        <stringProp name="delimiter">,</stringProp>
+        <stringProp name="fileEncoding"></stringProp>
+        <stringProp name="filename">C:/Users/akhil/Desktop/personal/data.csv</stringProp>
+        <boolProp name="ignoreFirstLine">false</boolProp>
+        <boolProp name="quotedData">false</boolProp>
+        <boolProp name="recycle">true</boolProp>
+        <stringProp name="shareMode">shareMode.all</stringProp>
+        <boolProp name="stopThread">false</boolProp>
+        <stringProp name="variableNames">username</stringProp>
+      </CSVDataSet>
+      <hashTree/>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread Group" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">500</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">600</stringProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration">0</stringProp>
+        <stringProp name="ThreadGroup.delay">0</stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+      </ThreadGroup>
+      <hashTree>
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Initial requests ${username}" enabled="true">
+          <boolProp name="TransactionController.includeTimers">false</boolProp>
+          <boolProp name="TransactionController.parent">true</boolProp>
+        </TransactionController>
+        <hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="http://qa.fidelitydebitcard.com/" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">http</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path"></stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <boolProp name="HTTPSampler.image_parser">true</boolProp>
+            <boolProp name="HTTPSampler.concurrentDwn">true</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Upgrade-Insecure-Requests" elementType="Header">
+                  <stringProp name="Header.name">Upgrade-Insecure-Requests</stringProp>
+                  <stringProp name="Header.value">1</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+            <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Uniform Random Timer" enabled="true">
+              <stringProp name="RandomTimer.range">0.0</stringProp>
+              <stringProp name="ConstantTimer.delay">0</stringProp>
+              <stringProp name="TestPlan.comments">Recorded time was 0 milliseconds</stringProp>
+            </UniformRandomTimer>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://dpservicexq2.fidelity.com/ftgw/dpdirect/measurement/visitoridentification/v1" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_2}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">ftgw/dpdirect/measurement/visitoridentification/v1</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <boolProp name="HTTPSampler.image_parser">true</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="AppName" elementType="Header">
+                  <stringProp name="Header.name">AppName</stringProp>
+                  <stringProp name="Header.value">rundmt</stringProp>
+                </elementProp>
+                <elementProp name="AppID" elementType="Header">
+                  <stringProp name="Header.name">AppID</stringProp>
+                  <stringProp name="Header.value">105653</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">*/*</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://loginxq1.fidelity.com/assets/20ac1b8fui206372ae87cc1f93128e" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&quot;sensor_data&quot;:&quot;7a74G7m23Vrp0o5c9101041.66-1,2,-94,-100,Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36,uaend,12147,20030107,en-GB,Gecko,3,0,0,0,395053,9044103,1280,680,1280,720,1280,553,1280,,cpen:0,i1:0,dm:0,cwen:0,non:1,opc:0,fc:0,sc:0,wrc:1,isc:0,vib:1,bat:1,x11:0,x12:1,8331,0.874787260437,802799522051,0,loc:-1,2,-94,-101,do_en,dm_en,t_en-1,2,-94,-105,0,0,0,1,1225,-1,0;1,-1,0,1,883,231,0;-1,2,-94,-102,0,0,0,1,1225,-1,0;1,-1,0,1,883,231,0;-1,2,-94,-108,-1,2,-94,-110,-1,2,-94,-117,-1,2,-94,-111,-1,2,-94,-109,-1,2,-94,-114,-1,2,-94,-103,-1,2,-94,-112,https://loginxq1.fidelity.com/ftgw/Fas/Fidelity/RtlCust/Login/Init?AuthRedUrl=https://loginxq1.fidelity.com/ftgw/Fas/Fidelity/RtlCustSSO/OutboundSSOOIDC/authorizeResume-1,2,-94,-115,1,32,32,0,0,0,0,3,0,1605599044102,-999999,17176,0,0,2862,0,0,10,0,0,8898F3E17EBB250397F1D3EA8751097B~-1~YAAQOVstF7HvMMd1AQAAPo4o1QTK+wBh5d5kqtQ18VQvRdzBgaW4MfALH5i4asnoZ3F43cxes3g1BnrMKgpSjhTidchBXp1n95yuokF9SAsQjjDT9QFertRCzQaCqqBhM8pDdQ/nOuSX6AMqh2A21swZ1+0q3Fr76eWAOv3mBQZW0LGLEhfmSSLQZAYu9eltFln8A+bkgnQud5Ul/aBhF3XY88lecjVmhmr4YM/AkNREcSiMNW25znhmFB35eFR1rmVG+g9A0+V2BY4+SIM3OtrYIRIaoQymqg3C8Caog2og73A8ryURlssrUqyJjnjnjuqkWp+7tc612QtOD/iu2Oc2XPtzj/q6HLphCaKbjdLHBeS/Ug==~-1~-1~-1,34303,-1,-1,30261693,PiZtE,95185,114-1,2,-94,-106,0,0-1,2,-94,-119,-1-1,2,-94,-122,0,0,0,0,1,0,0-1,2,-94,-123,-1,2,-94,-124,-1,2,-94,-126,-1,2,-94,-127,8-1,2,-94,-70,-1-1,2,-94,-80,94-1,2,-94,-116,678307575-1,2,-94,-118,96899-1,2,-94,-129,-1,2,-94,-121,;12;-1;0&quot;}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_3}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">assets/20ac1b8fui206372ae87cc1f93128e</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <boolProp name="HTTPSampler.image_parser">true</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">text/plain;charset=UTF-8</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">*/*</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://activate1.fidelity.com/?json=%7B%22op%22%3A%22setAttribute%22%2C%22data%22%3A%7B%22k%22%3A%5B%22sc_2%22%2C%22sc_4%22%5D%2C%22v%22%3A%5B%7B%22val%22%3A%22Typed%2FBookmarkedTyped%2FBookmarkedundefined%22%2C%22exp%22%3A1605582840044%7D%2C%7B%22val%22%3A%22%5B%5B%27Typed%2FBookmarked%27%2C%271605528607024%27%5D%2C%5B%27Typed%2FBookmarked%27%2C%271605580791030%27%5D%2C%5B%27Typed%2FBookmarked%27%2C%271605581005042%27%5D%2C%5B%27Typed%2FBookmarked%27%2C%271605581040044%27%5D%5D%22%2C%22exp%22%3A1763347440044%7D%5D%7D%2C%22uid%22%3A%2297bd6083-29f8-405b-9186-907cd26c453f%22%7D" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="json" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">json</stringProp>
+                  <stringProp name="Argument.value">{&quot;op&quot;:&quot;setAttribute&quot;,&quot;data&quot;:{&quot;k&quot;:[&quot;sc_2&quot;,&quot;sc_4&quot;],&quot;v&quot;:[{&quot;val&quot;:&quot;Typed/BookmarkedTyped/Bookmarkedundefined&quot;,&quot;exp&quot;:1605582840044},{&quot;val&quot;:&quot;[[&apos;Typed/Bookmarked&apos;,&apos;1605528607024&apos;],[&apos;Typed/Bookmarked&apos;,&apos;1605580791030&apos;],[&apos;Typed/Bookmarked&apos;,&apos;1605581005042&apos;],[&apos;Typed/Bookmarked&apos;,&apos;1605581040044&apos;]]&quot;,&quot;exp&quot;:1763347440044}]},&quot;uid&quot;:&quot;97bd6083-29f8-405b-9186-907cd26c453f&quot;}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_4}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path"></stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <boolProp name="HTTPSampler.image_parser">true</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">*/*</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://loginxq1.fidelity.com/assets/20ac1b8fui206372ae87cc1f93128e" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&quot;sensor_data&quot;:&quot;7a74G7m23Vrp0o5c9101041.66-1,2,-94,-100,Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36,uaend,12147,20030107,en-GB,Gecko,3,0,0,0,395053,9044103,1280,680,1280,720,1280,553,1280,,cpen:0,i1:0,dm:0,cwen:0,non:1,opc:0,fc:0,sc:0,wrc:1,isc:0,vib:1,bat:1,x11:0,x12:1,8331,0.327028942163,802799522051,0,loc:-1,2,-94,-101,do_en,dm_en,t_en-1,2,-94,-105,0,0,0,1,1225,-1,0;1,-1,0,1,883,231,0;-1,2,-94,-102,0,0,1,1,1225,-1,0;1,-1,1,1,883,231,0;-1,2,-94,-108,0,1,207,undefined,0,0,1225;1,2,209,undefined,0,0,1225;2,1,211,undefined,0,0,1225;3,2,211,undefined,0,0,1225;-1,2,-94,-110,-1,2,-94,-117,-1,2,-94,-111,0,185,-1,-1,-1;-1,2,-94,-109,-1,2,-94,-114,-1,2,-94,-103,-1,2,-94,-112,https://loginxq1.fidelity.com/ftgw/Fas/Fidelity/RtlCust/Login/Init?AuthRedUrl=https://loginxq1.fidelity.com/ftgw/Fas/Fidelity/RtlCustSSO/OutboundSSOOIDC/authorizeResume-1,2,-94,-115,NaN,32,32,185,0,0,NaN,590,0,1605599044102,72,17176,4,0,2862,0,0,592,1023,0,8898F3E17EBB250397F1D3EA8751097B~-1~YAAQOVstF4/xMMd1AQAAqRMp1QRCt0HVyu65h+uOgrdS4hQZ9rciu0qAmDA4d28/U3l2fiRGoU7pAof8/U9dhbvvue0ZL4huyC54ituCB/kNlh7dX1ZQP5tykW8jfS7bCHtfS3FO6yTkcnPQgl719h8vDVv5ufwA9EikG/Ne1DUw2dBDMcXP7AxT0lQLdXLx2IXDrbbgYl+GIUHbORdgo2rEWUUbedmnuuAt5U7ZdobFutbljiZPIiOBJGmnlTWHEXtGt0h39UFmq84gZZ9ly/MA5vUJ9RqGBzC3xL65j9eKiXXkzLGPZnyyCVfkgIqeRYopcrxfiSafhUnCpGjYy/ZmYUcfivyOfNwbaF8xcq8gC2wwuQ==~-1~-1~-1,35112,302,-541683715,30261693,PiZtE,18790,120-1,2,-94,-106,9,1-1,2,-94,-119,104,104,106,117,73,412,105,94,108,87,89,97,100,730,-1,2,-94,-122,0,0,0,0,1,0,0-1,2,-94,-123,-1,2,-94,-124,-1,2,-94,-126,-1,2,-94,-127,11321144241322243122-1,2,-94,-70,-1752591854;66351601;dis;,7,8;true;true;true;-330;true;24;24;true;false;-1-1,2,-94,-80,5526-1,2,-94,-116,678307575-1,2,-94,-118,110120-1,2,-94,-129,f9a811b8b59b3105f042b25a8eb024b1d3a535fcd10249efb20ffcfafdb6dca6,1.5,0,,,,0-1,2,-94,-121,;68;17;0&quot;}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_3}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">assets/20ac1b8fui206372ae87cc1f93128e</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <boolProp name="HTTPSampler.image_parser">true</boolProp>
+            <boolProp name="HTTPSampler.concurrentDwn">true</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">text/plain;charset=UTF-8</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">*/*</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://loginxq1.fidelity.com/assets/20ac1b8fui206372ae87cc1f93128e" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&quot;sensor_data&quot;:&quot;7a74G7m23Vrp0o5c9101041.66-1,2,-94,-100,Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36,uaend,12147,20030107,en-GB,Gecko,3,0,0,0,395053,9044103,1280,680,1280,720,1280,553,1280,,cpen:0,i1:0,dm:0,cwen:0,non:1,opc:0,fc:0,sc:0,wrc:1,isc:0,vib:1,bat:1,x11:0,x12:1,8331,0.06166998930,802799522051,0,loc:-1,2,-94,-101,do_en,dm_en,t_en-1,2,-94,-105,0,0,0,1,1225,-1,0;1,-1,0,1,883,231,0;-1,2,-94,-102,0,0,1,1,1225,-1,0;1,-1,1,1,883,231,0;-1,2,-94,-108,0,1,207,undefined,0,0,1225;1,2,209,undefined,0,0,1225;2,1,211,undefined,0,0,1225;3,2,211,undefined,0,0,1225;-1,2,-94,-110,0,1,740,544,161;1,1,747,560,162;2,1,760,572,162;3,1,776,614,162;4,1,793,632,162;5,1,809,642,162;6,1,826,648,162;7,1,842,650,163;8,1,859,652,164;9,1,876,654,164;10,1,892,654,165;11,1,1796,650,167;12,1,1809,643,169;13,1,1826,595,181;14,1,1842,556,186;15,1,1859,508,192;16,1,1876,482,197;17,1,1892,460,200;18,1,1909,435,204;19,1,1926,426,205;20,1,1942,420,206;21,1,1959,416,206;22,1,3116,221,302;23,1,3273,211,324;24,1,3284,212,326;25,1,3314,215,331;26,1,3333,217,333;27,1,3345,219,336;28,1,3379,224,339;29,1,3392,225,340;30,1,3409,229,342;31,1,3426,231,343;32,1,3442,234,344;33,1,3459,240,348;34,1,3476,242,349;35,1,3492,244,350;36,1,3532,248,352;37,1,3542,249,352;38,1,3544,250,352;39,1,3559,250,353;40,1,3576,252,354;41,1,3592,254,355;42,1,3609,255,355;43,1,6699,268,354;44,1,6709,328,348;45,1,6726,410,336;46,1,6743,546,309;47,1,6762,664,282;48,1,6777,802,258;49,1,6795,874,252;50,1,6809,900,250;51,1,6826,924,251;52,1,6842,941,252;53,1,6859,948,252;54,1,6876,961,252;55,1,6892,963,252;56,1,6909,964,252;57,1,6932,965,252;58,1,6945,966,252;59,1,6992,967,252;60,1,7009,968,252;61,1,7037,969,252;62,1,7058,970,251;63,1,7065,970,250;64,1,7079,971,248;65,1,7092,972,247;66,1,7109,974,242;67,1,7126,974,240;68,1,7142,976,239;69,1,7159,976,238;70,1,7176,976,236;71,1,7192,978,232;72,1,7209,980,228;73,1,7226,980,225;74,1,12828,1136,227;75,1,12842,1077,240;76,1,12859,1034,243;77,1,12875,958,243;78,1,12897,844,240;79,1,12915,718,242;80,1,12926,646,244;81,1,12942,592,244;82,1,12959,564,246;83,1,12976,545,248;84,1,12992,542,249;85,1,13257,518,258;86,1,13264,488,268;87,1,13275,466,276;88,1,13292,420,290;89,1,13309,392,298;90,1,13326,368,306;91,1,13342,332,317;92,1,13359,314,323;93,1,13375,300,327;94,1,13392,290,330;95,1,13409,283,332;96,1,13427,277,334;97,1,13442,275,336;98,1,13459,274,336;99,1,13475,273,336;112,3,14147,255,349,1512;-1,2,-94,-117,-1,2,-94,-111,0,185,-1,-1,-1;-1,2,-94,-109,-1,2,-94,-114,-1,2,-94,-103,2,7795;-1,2,-94,-112,https://loginxq1.fidelity.com/ftgw/Fas/Fidelity/RtlCust/Login/Init?AuthRedUrl=https://loginxq1.fidelity.com/ftgw/Fas/Fidelity/RtlCustSSO/OutboundSSOOIDC/authorizeResume-1,2,-94,-115,NaN,764521,32,185,0,0,NaN,14147,0,1605599044102,72,17176,4,113,2862,1,0,14149,675006,0,8898F3E17EBB250397F1D3EA8751097B~-1~YAAQOVstF6TxMMd1AQAAGhYp1QTaQnqRzehilVNnewZUuwvTQ6lHBwnYHXiEZE7xZvbgT47KGXWkn9Kv7lnOt8UWq8xACXFRbwW5yvu05DD7kBFau2drL1T9+CSunmWRgL8DxeQ0GpUEHkrId30usm4mLDS6TY0vuPx5+GnOPq51wiP7tMwplMS3zFT5ulpizpR6jxfw5GxcJrVfGlqivJIUnj6xuaUNTAoYmP8BygHZSO707WM2/FGFv9rBhkvQyP+vAxaUEMF9ensCFuVv7pQS62WITKiHxiqP2JeAAmOcjv21fB/RwD+Yw2stosj4oTMGI6ktDrWbuYMRGyKtHeNGNKKNq2Jdl8r00kGIM4DUUOImPQ==~-1~-1~-1,34956,302,-541683715,30261693,PiZtE,106502,111-1,2,-94,-106,1,2-1,2,-94,-119,90,105,106,100,116,112,123,120,95,88,13,12,21,664,-1,2,-94,-122,0,0,0,0,1,0,0-1,2,-94,-123,-1,2,-94,-124,-1,2,-94,-126,-1,2,-94,-127,11321144241322243122-1,2,-94,-70,-1752591854;66351601;dis;,7,8;true;true;true;-330;true;24;24;true;false;-1-1,2,-94,-80,5526-1,2,-94,-116,678307575-1,2,-94,-118,203767-1,2,-94,-129,f9a811b8b59b3105f042b25a8eb024b1d3a535fcd10249efb20ffcfafdb6dca6,1.5,a712c19fde04cde08d21754c81e951066896404f0eac6cbfd5255e434d879986,,,,0-1,2,-94,-121,;10;17;0&quot;}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_3}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">assets/20ac1b8fui206372ae87cc1f93128e</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <boolProp name="HTTPSampler.image_parser">true</boolProp>
+            <boolProp name="HTTPSampler.concurrentDwn">true</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">text/plain;charset=UTF-8</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">*/*</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="login page ${username}" enabled="true">
+          <boolProp name="TransactionController.includeTimers">false</boolProp>
+          <boolProp name="TransactionController.parent">true</boolProp>
+        </TransactionController>
+        <hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://loginxq1.fidelity.com/ftgw/Fas/Fidelity/RtlCust/Login/Response" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="PIN" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">PIN</stringProp>
+                  <stringProp name="Argument.value">121212</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="SavedIdInd" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">SavedIdInd</stringProp>
+                  <stringProp name="Argument.value">N</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="DEVICE_PRINT" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">DEVICE_PRINT</stringProp>
+                  <stringProp name="Argument.value">version=3.5.2_2&amp;pm_fpua=mozilla/5.0 (windows nt 10.0; win64; x64) applewebkit/537.36 (khtml, like gecko) chrome/86.0.4240.198 safari/537.36|5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36|Win32&amp;pm_fpsc=24|1280|720|680&amp;pm_fpsw=&amp;pm_fptz=5.5&amp;pm_fpln=lang=en-GB|syslang=|userlang=&amp;pm_fpjv=0&amp;pm_fpco=1&amp;pm_fpasw=internal-pdf-viewer|mhjfbmdgcfjbbpaeojofohoefgiehjai|internal-nacl-plugin&amp;pm_fpan=Netscape&amp;pm_fpacn=Mozilla&amp;pm_fpol=true&amp;pm_fposp=&amp;pm_fpup=&amp;pm_fpsaw=1280&amp;pm_fpspd=24&amp;pm_fpsbd=&amp;pm_fpsdx=&amp;pm_fpsdy=&amp;pm_fpslx=&amp;pm_fpsly=&amp;pm_fpsfse=&amp;pm_fpsui=&amp;pm_os=Windows&amp;pm_brmjv=86&amp;pm_br=Chrome&amp;pm_inpt=&amp;pm_expt=</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="SSN" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">SSN</stringProp>
+                  <stringProp name="Argument.value">${username}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_3}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">ftgw/Fas/Fidelity/RtlCust/Login/Response</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <boolProp name="HTTPSampler.image_parser">true</boolProp>
+            <boolProp name="HTTPSampler.concurrentDwn">true</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Upgrade-Insecure-Requests" elementType="Header">
+                  <stringProp name="Header.name">Upgrade-Insecure-Requests</stringProp>
+                  <stringProp name="Header.value">1</stringProp>
+                </elementProp>
+                <elementProp name="Origin" elementType="Header">
+                  <stringProp name="Header.name">Origin</stringProp>
+                  <stringProp name="Header.value">https://loginxq1.fidelity.com</stringProp>
+                </elementProp>
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">application/x-www-form-urlencoded</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+            <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Uniform Random Timer" enabled="true">
+              <stringProp name="RandomTimer.range">7178.0</stringProp>
+              <stringProp name="ConstantTimer.delay">8589</stringProp>
+              <stringProp name="TestPlan.comments">Recorded time was 17178 milliseconds</stringProp>
+            </UniformRandomTimer>
+            <hashTree/>
+            <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="sessionId extractor" enabled="true">
+              <stringProp name="RegexExtractor.useHeaders">true</stringProp>
+              <stringProp name="RegexExtractor.refname">sessionId</stringProp>
+              <stringProp name="RegexExtractor.regex">sessionId: (.+)</stringProp>
+              <stringProp name="RegexExtractor.template">$1$</stringProp>
+              <stringProp name="RegexExtractor.default">null</stringProp>
+              <stringProp name="RegexExtractor.match_number">0</stringProp>
+              <stringProp name="Sample.scope">all</stringProp>
+            </RegexExtractor>
+            <hashTree/>
+            <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="customerId extractor" enabled="true">
+              <stringProp name="RegexExtractor.useHeaders">true</stringProp>
+              <stringProp name="RegexExtractor.refname">customerId</stringProp>
+              <stringProp name="RegexExtractor.regex">customerId: (.+)</stringProp>
+              <stringProp name="RegexExtractor.template">$1$</stringProp>
+              <stringProp name="RegexExtractor.default">null</stringProp>
+              <stringProp name="RegexExtractor.match_number">0</stringProp>
+              <stringProp name="Sample.scope">all</stringProp>
+            </RegexExtractor>
+            <hashTree/>
+            <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="apiToken extractor" enabled="true">
+              <stringProp name="RegexExtractor.useHeaders">true</stringProp>
+              <stringProp name="RegexExtractor.refname">apiToken</stringProp>
+              <stringProp name="RegexExtractor.regex">apiToken: (.+)</stringProp>
+              <stringProp name="RegexExtractor.template">$1$</stringProp>
+              <stringProp name="RegexExtractor.default">null</stringProp>
+              <stringProp name="RegexExtractor.match_number">0</stringProp>
+              <stringProp name="Sample.scope">all</stringProp>
+            </RegexExtractor>
+            <hashTree/>
+            <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="authToken extractor" enabled="true">
+              <stringProp name="RegexExtractor.useHeaders">true</stringProp>
+              <stringProp name="RegexExtractor.refname">authToken</stringProp>
+              <stringProp name="RegexExtractor.regex">authToken: (.+)</stringProp>
+              <stringProp name="RegexExtractor.template">$1$</stringProp>
+              <stringProp name="RegexExtractor.default">null</stringProp>
+              <stringProp name="RegexExtractor.match_number">0</stringProp>
+              <stringProp name="Sample.scope">all</stringProp>
+            </RegexExtractor>
+            <hashTree/>
+            <BeanShellAssertion guiclass="BeanShellAssertionGui" testclass="BeanShellAssertion" testname="BeanShell Assertion" enabled="true">
+              <stringProp name="BeanShellAssertion.query">${__setProperty(apiToken,${apiToken})}</stringProp>
+              <stringProp name="BeanShellAssertion.filename"></stringProp>
+              <stringProp name="BeanShellAssertion.parameters"></stringProp>
+              <boolProp name="BeanShellAssertion.resetInterpreter">false</boolProp>
+            </BeanShellAssertion>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://qa.fidelitydebitcard.com" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path"></stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <boolProp name="HTTPSampler.image_parser">true</boolProp>
+            <boolProp name="HTTPSampler.concurrentDwn">true</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="clntSessionId" elementType="Header">
+                  <stringProp name="Header.name">clntSessionId</stringProp>
+                  <stringProp name="Header.value"></stringProp>
+                </elementProp>
+                <elementProp name="Pragma" elementType="Header">
+                  <stringProp name="Header.name">Pragma</stringProp>
+                  <stringProp name="Header.value">no-cache</stringProp>
+                </elementProp>
+                <elementProp name="client_ip" elementType="Header">
+                  <stringProp name="Header.name">client_ip</stringProp>
+                  <stringProp name="Header.value"></stringProp>
+                </elementProp>
+                <elementProp name="Authorization" elementType="Header">
+                  <stringProp name="Header.name">Authorization</stringProp>
+                  <stringProp name="Header.value">Bearer</stringProp>
+                </elementProp>
+                <elementProp name="loginRole" elementType="Header">
+                  <stringProp name="Header.name">loginRole</stringProp>
+                  <stringProp name="Header.value"></stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">application/json</stringProp>
+                </elementProp>
+                <elementProp name="Cache-Control" elementType="Header">
+                  <stringProp name="Header.name">Cache-Control</stringProp>
+                  <stringProp name="Header.value">no-cache, no-store, max-age=0</stringProp>
+                </elementProp>
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">application/json</stringProp>
+                </elementProp>
+                <elementProp name="customerId" elementType="Header">
+                  <stringProp name="Header.name">customerId</stringProp>
+                  <stringProp name="Header.value"></stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://qa.fidelitydebitcard.com/assets/1001/json/client.json" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">assets/1001/json/client.json</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <boolProp name="HTTPSampler.image_parser">true</boolProp>
+            <boolProp name="HTTPSampler.concurrentDwn">true</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="clntSessionId" elementType="Header">
+                  <stringProp name="Header.name">clntSessionId</stringProp>
+                  <stringProp name="Header.value">${authToken}</stringProp>
+                </elementProp>
+                <elementProp name="Pragma" elementType="Header">
+                  <stringProp name="Header.name">Pragma</stringProp>
+                  <stringProp name="Header.value">no-cache</stringProp>
+                </elementProp>
+                <elementProp name="client_ip" elementType="Header">
+                  <stringProp name="Header.name">client_ip</stringProp>
+                  <stringProp name="Header.value">103.203.66.179</stringProp>
+                </elementProp>
+                <elementProp name="Authorization" elementType="Header">
+                  <stringProp name="Header.name">Authorization</stringProp>
+                  <stringProp name="Header.value">Bearer ${__property(apiToken)}</stringProp>
+                </elementProp>
+                <elementProp name="loginRole" elementType="Header">
+                  <stringProp name="Header.name">loginRole</stringProp>
+                  <stringProp name="Header.value">FidCust</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">application/json</stringProp>
+                </elementProp>
+                <elementProp name="Cache-Control" elementType="Header">
+                  <stringProp name="Header.name">Cache-Control</stringProp>
+                  <stringProp name="Header.value">no-cache, no-store, max-age=0</stringProp>
+                </elementProp>
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">application/json</stringProp>
+                </elementProp>
+                <elementProp name="customerId" elementType="Header">
+                  <stringProp name="Header.name">customerId</stringProp>
+                  <stringProp name="Header.value">${customerId}</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://apigateway.qa.bnymellon.com/dcm/v2/session/" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_5}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">dcm/v2/session/${sessionId}</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="clntSessionId" elementType="Header">
+                  <stringProp name="Header.name">clntSessionId</stringProp>
+                  <stringProp name="Header.value">${authToken}</stringProp>
+                </elementProp>
+                <elementProp name="Pragma" elementType="Header">
+                  <stringProp name="Header.name">Pragma</stringProp>
+                  <stringProp name="Header.value">no-cache</stringProp>
+                </elementProp>
+                <elementProp name="client_ip" elementType="Header">
+                  <stringProp name="Header.name">client_ip</stringProp>
+                  <stringProp name="Header.value">103.203.66.179</stringProp>
+                </elementProp>
+                <elementProp name="Authorization" elementType="Header">
+                  <stringProp name="Header.name">Authorization</stringProp>
+                  <stringProp name="Header.value">Bearer ${__property(apiToken)}</stringProp>
+                </elementProp>
+                <elementProp name="loginRole" elementType="Header">
+                  <stringProp name="Header.name">loginRole</stringProp>
+                  <stringProp name="Header.value">FidCust</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">application/json</stringProp>
+                </elementProp>
+                <elementProp name="Cache-Control" elementType="Header">
+                  <stringProp name="Header.name">Cache-Control</stringProp>
+                  <stringProp name="Header.value">no-cache, no-store, max-age=0</stringProp>
+                </elementProp>
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">application/json</stringProp>
+                </elementProp>
+                <elementProp name="customerId" elementType="Header">
+                  <stringProp name="Header.name">customerId</stringProp>
+                  <stringProp name="Header.value">${customerId}</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://apigateway.qa.bnymellon.com/dcm/v2/customers/7L0NB1X10259088/audit" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&quot;action&quot;:&quot;CustomerProfileAPIResponse&quot;,&quot;sessionId&quot;:&quot;${sessionId}&quot;,&quot;customerProfileAPIResponse&quot;:&quot;{loginRole:FidCust,allowedAccess:true,bnyCustomerId:${customerId}}&quot;}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_5}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">dcm/v2/customers/${customerId}/audit</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="clntSessionId" elementType="Header">
+                  <stringProp name="Header.name">clntSessionId</stringProp>
+                  <stringProp name="Header.value">${authToken}</stringProp>
+                </elementProp>
+                <elementProp name="Pragma" elementType="Header">
+                  <stringProp name="Header.name">Pragma</stringProp>
+                  <stringProp name="Header.value">no-cache</stringProp>
+                </elementProp>
+                <elementProp name="client_ip" elementType="Header">
+                  <stringProp name="Header.name">client_ip</stringProp>
+                  <stringProp name="Header.value">103.203.66.179</stringProp>
+                </elementProp>
+                <elementProp name="Authorization" elementType="Header">
+                  <stringProp name="Header.name">Authorization</stringProp>
+                  <stringProp name="Header.value">Bearer ${__property(apiToken)}</stringProp>
+                </elementProp>
+                <elementProp name="loginRole" elementType="Header">
+                  <stringProp name="Header.name">loginRole</stringProp>
+                  <stringProp name="Header.value">FidCust</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">application/json</stringProp>
+                </elementProp>
+                <elementProp name="Cache-Control" elementType="Header">
+                  <stringProp name="Header.name">Cache-Control</stringProp>
+                  <stringProp name="Header.value">no-cache, no-store, max-age=0</stringProp>
+                </elementProp>
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">application/json</stringProp>
+                </elementProp>
+                <elementProp name="customerId" elementType="Header">
+                  <stringProp name="Header.name">customerId</stringProp>
+                  <stringProp name="Header.value">${customerId}</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://apigateway.qa.bnymellon.com/dcm/v2/customers/accounts" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_5}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">dcm/v2/customers/${customerId}/accounts</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="clntSessionId" elementType="Header">
+                  <stringProp name="Header.name">clntSessionId</stringProp>
+                  <stringProp name="Header.value">${authToken}</stringProp>
+                </elementProp>
+                <elementProp name="Pragma" elementType="Header">
+                  <stringProp name="Header.name">Pragma</stringProp>
+                  <stringProp name="Header.value">no-cache</stringProp>
+                </elementProp>
+                <elementProp name="client_ip" elementType="Header">
+                  <stringProp name="Header.name">client_ip</stringProp>
+                  <stringProp name="Header.value">103.203.66.179</stringProp>
+                </elementProp>
+                <elementProp name="Authorization" elementType="Header">
+                  <stringProp name="Header.name">Authorization</stringProp>
+                  <stringProp name="Header.value">Bearer ${__property(apiToken)}</stringProp>
+                </elementProp>
+                <elementProp name="loginRole" elementType="Header">
+                  <stringProp name="Header.name">loginRole</stringProp>
+                  <stringProp name="Header.value">FidCust</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">application/json</stringProp>
+                </elementProp>
+                <elementProp name="Cache-Control" elementType="Header">
+                  <stringProp name="Header.name">Cache-Control</stringProp>
+                  <stringProp name="Header.value">no-cache, no-store, max-age=0</stringProp>
+                </elementProp>
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">application/json</stringProp>
+                </elementProp>
+                <elementProp name="customerId" elementType="Header">
+                  <stringProp name="Header.name">customerId</stringProp>
+                  <stringProp name="Header.value">${customerId}</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://apigateway.qa.bnymellon.com/dcm/v2/customers//audit" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&quot;action&quot;:&quot;Get Accounts Details&quot;,&quot;sessionId&quot;:&quot;6E863A8A70A119A907C97F29F4145A46&quot;,&quot;accountDetailsAPIResponse&quot;:&quot;[{\&quot;displayAccount\&quot;:true,\&quot;productCodeName\&quot;:\&quot;Brokerage\&quot;,\&quot;accountName\&quot;:null,\&quot;accountNumber\&quot;:\&quot;X24999512\&quot;,\&quot;hiddenIndicator\&quot;:false,\&quot;exceptionGrantedForNewCard\&quot;:false,\&quot;accountUsers\&quot;:[{\&quot;middleName\&quot;:null,\&quot;lastName\&quot;:\&quot;O&apos; BURKET\&quot;,\&quot;firstName\&quot;:\&quot;ERIK\&quot;,\&quot;cardOrderInProcess\&quot;:false,\&quot;customerId\&quot;:\&quot;7L0NB1X10259088\&quot;,\&quot;serviceRequests\&quot;:null,\&quot;accountRole\&quot;:\&quot;Owner\&quot;,\&quot;cards\&quot;:[],\&quot;userEntitlements\&quot;:{\&quot;canViewAccountProfile\&quot;:true,\&quot;unmaskCardNumber\&quot;:false,\&quot;helpAccountNotListed\&quot;:true,\&quot;viewLimits\&quot;:true,\&quot;activateCard\&quot;:true,\&quot;reportLostStolenCard\&quot;:true,\&quot;replaceCard\&quot;:true,\&quot;updatePin\&quot;:true,\&quot;addTravelNotice\&quot;:true,\&quot;debitCardAlerts\&quot;:true,\&quot;backToPortfolio\&quot;:true,\&quot;additionalCardsInfoLink\&quot;:false,\&quot;requestNewCard\&quot;:true,\&quot;blockUnblockCard\&quot;:true}}],\&quot;accountNickName\&quot;:\&quot;INDIVIDUAL\&quot;,\&quot;accountRelationship\&quot;:\&quot;primary\&quot;,\&quot;entitlements\&quot;:{\&quot;canViewAccountProfile\&quot;:true,\&quot;unmaskCardNumber\&quot;:false,\&quot;helpAccountNotListed\&quot;:true,\&quot;viewLimits\&quot;:true,\&quot;activateCard\&quot;:true,\&quot;reportLostStolenCard\&quot;:true,\&quot;replaceCard\&quot;:true,\&quot;updatePin\&quot;:true,\&quot;addTravelNotice\&quot;:true,\&quot;debitCardAlerts\&quot;:true,\&quot;backToPortfolio\&quot;:true,\&quot;additionalCardsInfoLink\&quot;:false,\&quot;requestNewCard\&quot;:true,\&quot;blockUnblockCard\&quot;:true},\&quot;accountStatus\&quot;:{\&quot;accountStatusIndicator\&quot;:false,\&quot;accountStatusMessage\&quot;:null},\&quot;accountBalance\&quot;:null,\&quot;restrictions\&quot;:{\&quot;restrictedActions\&quot;:{\&quot;orderCardRestricted\&quot;:false,\&quot;replaceCardRestricted\&quot;:false,\&quot;activateCardRestricted\&quot;:false,\&quot;travelNoticeRestricted\&quot;:false,\&quot;managePinRestricted\&quot;:false,\&quot;reportLostOrStolenCardRestricted\&quot;:false,\&quot;lockUnlockCardRestricted\&quot;:false},\&quot;commonActionMessage\&quot;:null,\&quot;message\&quot;:\&quot;null\&quot;,\&quot;restriction\&quot;:[{\&quot;message\&quot;:\&quot;\&quot;,\&quot;restrictionType\&quot;:\&quot;MONEY_OUT\&quot;,\&quot;value\&quot;:false},{\&quot;message\&quot;:\&quot;\&quot;,\&quot;restrictionType\&quot;:\&quot;CARD_ORDER\&quot;,\&quot;value\&quot;:false},{\&quot;message\&quot;:\&quot;\&quot;,\&quot;restrictionType\&quot;:\&quot;CARD_CLOSING\&quot;,\&quot;value\&quot;:false},{\&quot;message\&quot;:\&quot;\&quot;,\&quot;restrictionType\&quot;:\&quot;RCB_ZERO\&quot;,\&quot;value\&quot;:false}]},\&quot;numberOfOwners\&quot;:1,\&quot;anyCardHasRestriction\&quot;:false,\&quot;sysMsgs\&quot;:{\&quot;sysMsg\&quot;:[{\&quot;detail\&quot;:\&quot;Daily limit an remaining amount views are currently unavailable. Please try again later.\&quot;,\&quot;source\&quot;:\&quot;Balance\&quot;,\&quot;code\&quot;:\&quot;ACCOUNT_SYSMSG_5000\&quot;,\&quot;type\&quot;:\&quot;error\&quot;}]}},{\&quot;displayAccount\&quot;:true,\&quot;productCodeName\&quot;:\&quot;Brokerage\&quot;,\&quot;accountName\&quot;:null,\&quot;accountNumber\&quot;:\&quot;X21986698\&quot;,\&quot;hiddenIndicator\&quot;:false,\&quot;exceptionGrantedForNewCard\&quot;:false,\&quot;accountUsers\&quot;:[{\&quot;middleName\&quot;:\&quot;T\&quot;,\&quot;lastName\&quot;:\&quot;ENNIS\&quot;,\&quot;firstName\&quot;:\&quot;REDMOND\&quot;,\&quot;cardOrderInProcess\&quot;:false,\&quot;customerId\&quot;:\&quot;EFALU2TD0695516\&quot;,\&quot;serviceRequests\&quot;:null,\&quot;accountRole\&quot;:\&quot;Owner\&quot;,\&quot;cards\&quot;:[],\&quot;userEntitlements\&quot;:{\&quot;canViewAccountProfile\&quot;:true,\&quot;unmaskCardNumber\&quot;:false,\&quot;helpAccountNotListed\&quot;:true,\&quot;viewLimits\&quot;:true,\&quot;activateCard\&quot;:true,\&quot;reportLostStolenCard\&quot;:true,\&quot;replaceCard\&quot;:true,\&quot;updatePin\&quot;:false,\&quot;addTravelNotice\&quot;:true,\&quot;debitCardAlerts\&quot;:true,\&quot;backToPortfolio\&quot;:true,\&quot;additionalCardsInfoLink\&quot;:false,\&quot;requestNewCard\&quot;:true,\&quot;blockUnblockCard\&quot;:true}},{\&quot;middleName\&quot;:null,\&quot;lastName\&quot;:\&quot;O&apos; BURKET\&quot;,\&quot;firstName\&quot;:\&quot;ERIK\&quot;,\&quot;cardOrderInProcess\&quot;:false,\&quot;customerId\&quot;:\&quot;7L0NB1X10259088\&quot;,\&quot;serviceRequests\&quot;:null,\&quot;accountRole\&quot;:\&quot;Owner\&quot;,\&quot;cards\&quot;:[],\&quot;userEntitlements\&quot;:{\&quot;canViewAccountProfile\&quot;:true,\&quot;unmaskCardNumber\&quot;:false,\&quot;helpAccountNotListed\&quot;:true,\&quot;viewLimits\&quot;:true,\&quot;activateCard\&quot;:true,\&quot;reportLostStolenCard\&quot;:true,\&quot;replaceCard\&quot;:true,\&quot;updatePin\&quot;:true,\&quot;addTravelNotice\&quot;:true,\&quot;debitCardAlerts\&quot;:true,\&quot;backToPortfolio\&quot;:true,\&quot;additionalCardsInfoLink\&quot;:false,\&quot;requestNewCard\&quot;:true,\&quot;blockUnblockCard\&quot;:true}}],\&quot;accountNickName\&quot;:\&quot;TRUST: UNDER AGREEMENT\&quot;,\&quot;accountRelationship\&quot;:\&quot;primary\&quot;,\&quot;entitlements\&quot;:{\&quot;canViewAccountProfile\&quot;:true,\&quot;unmaskCardNumber\&quot;:false,\&quot;helpAccountNotListed\&quot;:true,\&quot;viewLimits\&quot;:true,\&quot;activateCard\&quot;:true,\&quot;reportLostStolenCard\&quot;:true,\&quot;replaceCard\&quot;:true,\&quot;updatePin\&quot;:true,\&quot;addTravelNotice\&quot;:true,\&quot;debitCardAlerts\&quot;:true,\&quot;backToPortfolio\&quot;:true,\&quot;additionalCardsInfoLink\&quot;:false,\&quot;requestNewCard\&quot;:true,\&quot;blockUnblockCard\&quot;:true},\&quot;accountStatus\&quot;:{\&quot;accountStatusIndicator\&quot;:false,\&quot;accountStatusMessage\&quot;:null},\&quot;accountBalance\&quot;:null,\&quot;restrictions\&quot;:{\&quot;restrictedActions\&quot;:{\&quot;orderCardRestricted\&quot;:false,\&quot;replaceCardRestricted\&quot;:false,\&quot;activateCardRestricted\&quot;:false,\&quot;travelNoticeRestricted\&quot;:false,\&quot;managePinRestricted\&quot;:false,\&quot;reportLostOrStolenCardRestricted\&quot;:false,\&quot;lockUnlockCardRestricted\&quot;:false},\&quot;commonActionMessage\&quot;:null,\&quot;message\&quot;:\&quot;null\&quot;,\&quot;restriction\&quot;:[{\&quot;message\&quot;:\&quot;\&quot;,\&quot;restrictionType\&quot;:\&quot;MONEY_OUT\&quot;,\&quot;value\&quot;:false},{\&quot;message\&quot;:\&quot;\&quot;,\&quot;restrictionType\&quot;:\&quot;CARD_ORDER\&quot;,\&quot;value\&quot;:false},{\&quot;message\&quot;:\&quot;\&quot;,\&quot;restrictionType\&quot;:\&quot;CARD_CLOSING\&quot;,\&quot;value\&quot;:false},{\&quot;message\&quot;:\&quot;\&quot;,\&quot;restrictionType\&quot;:\&quot;RCB_ZERO\&quot;,\&quot;value\&quot;:false}]},\&quot;numberOfOwners\&quot;:2,\&quot;anyCardHasRestriction\&quot;:false,\&quot;sysMsgs\&quot;:{\&quot;sysMsg\&quot;:[{\&quot;detail\&quot;:\&quot;Daily limit an remaining amount views are currently unavailable. Please try again later.\&quot;,\&quot;source\&quot;:\&quot;Balance\&quot;,\&quot;code\&quot;:\&quot;ACCOUNT_SYSMSG_5000\&quot;,\&quot;type\&quot;:\&quot;error\&quot;}]}},{\&quot;displayAccount\&quot;:true,\&quot;productCodeName\&quot;:\&quot;Brokerage\&quot;,\&quot;accountName\&quot;:null,\&quot;accountNumber\&quot;:\&quot;X12869381\&quot;,\&quot;hiddenIndicator\&quot;:false,\&quot;exceptionGrantedForNewCard\&quot;:false,\&quot;accountUsers\&quot;:[{\&quot;middleName\&quot;:null,\&quot;lastName\&quot;:\&quot;O&apos; BURKET\&quot;,\&quot;firstName\&quot;:\&quot;ERIK\&quot;,\&quot;cardOrderInProcess\&quot;:false,\&quot;customerId\&quot;:\&quot;7L0NB1X10259088\&quot;,\&quot;serviceRequests\&quot;:null,\&quot;accountRole\&quot;:\&quot;Owner\&quot;,\&quot;cards\&quot;:[],\&quot;userEntitlements\&quot;:{\&quot;canViewAccountProfile\&quot;:true,\&quot;unmaskCardNumber\&quot;:false,\&quot;helpAccountNotListed\&quot;:true,\&quot;viewLimits\&quot;:true,\&quot;activateCard\&quot;:true,\&quot;reportLostStolenCard\&quot;:true,\&quot;replaceCard\&quot;:true,\&quot;updatePin\&quot;:true,\&quot;addTravelNotice\&quot;:true,\&quot;debitCardAlerts\&quot;:true,\&quot;backToPortfolio\&quot;:true,\&quot;additionalCardsInfoLink\&quot;:false,\&quot;requestNewCard\&quot;:true,\&quot;blockUnblockCard\&quot;:true}}],\&quot;accountNickName\&quot;:\&quot;TRUST: UNDER AGREEMENT\&quot;,\&quot;accountRelationship\&quot;:\&quot;primary\&quot;,\&quot;entitlements\&quot;:{\&quot;canViewAccountProfile\&quot;:true,\&quot;unmaskCardNumber\&quot;:false,\&quot;helpAccountNotListed\&quot;:true,\&quot;viewLimits\&quot;:true,\&quot;activateCard\&quot;:true,\&quot;reportLostStolenCard\&quot;:true,\&quot;replaceCard\&quot;:true,\&quot;updatePin\&quot;:true,\&quot;addTravelNotice\&quot;:true,\&quot;debitCardAlerts\&quot;:true,\&quot;backToPortfolio\&quot;:true,\&quot;additionalCardsInfoLink\&quot;:false,\&quot;requestNewCard\&quot;:true,\&quot;blockUnblockCard\&quot;:true},\&quot;accountStatus\&quot;:{\&quot;accountStatusIndicator\&quot;:false,\&quot;accountStatusMessage\&quot;:null},\&quot;accountBalance\&quot;:110.78,\&quot;restrictions\&quot;:{\&quot;restrictedActions\&quot;:{\&quot;orderCardRestricted\&quot;:false,\&quot;replaceCardRestricted\&quot;:false,\&quot;activateCardRestricted\&quot;:false,\&quot;travelNoticeRestricted\&quot;:false,\&quot;managePinRestricted\&quot;:false,\&quot;reportLostOrStolenCardRestricted\&quot;:false,\&quot;lockUnlockCardRestricted\&quot;:false},\&quot;commonActionMessage\&quot;:null,\&quot;message\&quot;:\&quot;null\&quot;,\&quot;restriction\&quot;:[{\&quot;message\&quot;:\&quot;\&quot;,\&quot;restrictionType\&quot;:\&quot;MONEY_OUT\&quot;,\&quot;value\&quot;:false},{\&quot;message\&quot;:\&quot;\&quot;,\&quot;restrictionType\&quot;:\&quot;CARD_ORDER\&quot;,\&quot;value\&quot;:false},{\&quot;message\&quot;:\&quot;\&quot;,\&quot;restrictionType\&quot;:\&quot;CARD_CLOSING\&quot;,\&quot;value\&quot;:false},{\&quot;message\&quot;:\&quot;\&quot;,\&quot;restrictionType\&quot;:\&quot;RCB_ZERO\&quot;,\&quot;value\&quot;:false}]},\&quot;numberOfOwners\&quot;:1,\&quot;anyCardHasRestriction\&quot;:false},{\&quot;displayAccount\&quot;:true,\&quot;productCodeName\&quot;:\&quot;Health Savings\&quot;,\&quot;accountName\&quot;:null,\&quot;accountNumber\&quot;:\&quot;121721804\&quot;,\&quot;hiddenIndicator\&quot;:false,\&quot;exceptionGrantedForNewCard\&quot;:false,\&quot;accountUsers\&quot;:[{\&quot;middleName\&quot;:null,\&quot;lastName\&quot;:\&quot;O&apos; BURKET\&quot;,\&quot;firstName\&quot;:\&quot;ERIK\&quot;,\&quot;cardOrderInProcess\&quot;:false,\&quot;customerId\&quot;:\&quot;7L0NB1X10259088\&quot;,\&quot;serviceRequests\&quot;:null,\&quot;accountRole\&quot;:\&quot;Owner\&quot;,\&quot;cards\&quot;:[],\&quot;userEntitlements\&quot;:{\&quot;canViewAccountProfile\&quot;:true,\&quot;unmaskCardNumber\&quot;:false,\&quot;helpAccountNotListed\&quot;:true,\&quot;viewLimits\&quot;:true,\&quot;activateCard\&quot;:true,\&quot;reportLostStolenCard\&quot;:true,\&quot;replaceCard\&quot;:true,\&quot;updatePin\&quot;:true,\&quot;addTravelNotice\&quot;:true,\&quot;debitCardAlerts\&quot;:true,\&quot;backToPortfolio\&quot;:true,\&quot;additionalCardsInfoLink\&quot;:false,\&quot;requestNewCard\&quot;:true,\&quot;blockUnblockCard\&quot;:true}}],\&quot;accountNickName\&quot;:\&quot;HEALTH SAVINGS ACCOUNT\&quot;,\&quot;accountRelationship\&quot;:\&quot;primary\&quot;,\&quot;entitlements\&quot;:{\&quot;canViewAccountProfile\&quot;:true,\&quot;unmaskCardNumber\&quot;:false,\&quot;helpAccountNotListed\&quot;:true,\&quot;viewLimits\&quot;:true,\&quot;activateCard\&quot;:true,\&quot;reportLostStolenCard\&quot;:true,\&quot;replaceCard\&quot;:true,\&quot;updatePin\&quot;:true,\&quot;addTravelNotice\&quot;:true,\&quot;debitCardAlerts\&quot;:true,\&quot;backToPortfolio\&quot;:true,\&quot;additionalCardsInfoLink\&quot;:false,\&quot;requestNewCard\&quot;:true,\&quot;blockUnblockCard\&quot;:true},\&quot;accountStatus\&quot;:{\&quot;accountStatusIndicator\&quot;:false,\&quot;accountStatusMessage\&quot;:null},\&quot;accountBalance\&quot;:null,\&quot;restrictions\&quot;:{\&quot;restrictedActions\&quot;:{\&quot;orderCardRestricted\&quot;:false,\&quot;replaceCardRestricted\&quot;:false,\&quot;activateCardRestricted\&quot;:false,\&quot;travelNoticeRestricted\&quot;:false,\&quot;managePinRestricted\&quot;:false,\&quot;reportLostOrStolenCardRestricted\&quot;:false,\&quot;lockUnlockCardRestricted\&quot;:false},\&quot;commonActionMessage\&quot;:null,\&quot;message\&quot;:\&quot;null\&quot;,\&quot;restriction\&quot;:[{\&quot;message\&quot;:\&quot;\&quot;,\&quot;restrictionType\&quot;:\&quot;MONEY_OUT\&quot;,\&quot;value\&quot;:false},{\&quot;message\&quot;:\&quot;\&quot;,\&quot;restrictionType\&quot;:\&quot;CARD_ORDER\&quot;,\&quot;value\&quot;:false},{\&quot;message\&quot;:\&quot;\&quot;,\&quot;restrictionType\&quot;:\&quot;CARD_CLOSING\&quot;,\&quot;value\&quot;:false},{\&quot;message\&quot;:\&quot;\&quot;,\&quot;restrictionType\&quot;:\&quot;RCB_ZERO\&quot;,\&quot;value\&quot;:false}]},\&quot;numberOfOwners\&quot;:1,\&quot;anyCardHasRestriction\&quot;:false,\&quot;sysMsgs\&quot;:{\&quot;sysMsg\&quot;:[{\&quot;detail\&quot;:\&quot;Daily limit an remaining amount views are currently unavailable. Please try again later.\&quot;,\&quot;source\&quot;:\&quot;Balance\&quot;,\&quot;code\&quot;:\&quot;ACCOUNT_SYSMSG_5000\&quot;,\&quot;type\&quot;:\&quot;error\&quot;}]}},{\&quot;displayAccount\&quot;:true,\&quot;productCodeName\&quot;:\&quot;Health Savings\&quot;,\&quot;accountName\&quot;:null,\&quot;accountNumber\&quot;:\&quot;139335296\&quot;,\&quot;hiddenIndicator\&quot;:false,\&quot;exceptionGrantedForNewCard\&quot;:false,\&quot;accountUsers\&quot;:[{\&quot;middleName\&quot;:null,\&quot;lastName\&quot;:\&quot;O&apos; BURKET\&quot;,\&quot;firstName\&quot;:\&quot;ERIK\&quot;,\&quot;cardOrderInProcess\&quot;:false,\&quot;customerId\&quot;:\&quot;7L0NB1X10259088\&quot;,\&quot;serviceRequests\&quot;:null,\&quot;accountRole\&quot;:\&quot;Owner\&quot;,\&quot;cards\&quot;:[],\&quot;userEntitlements\&quot;:{\&quot;canViewAccountProfile\&quot;:true,\&quot;unmaskCardNumber\&quot;:false,\&quot;helpAccountNotListed\&quot;:true,\&quot;viewLimits\&quot;:true,\&quot;activateCard\&quot;:true,\&quot;reportLostStolenCard\&quot;:true,\&quot;replaceCard\&quot;:true,\&quot;updatePin\&quot;:true,\&quot;addTravelNotice\&quot;:true,\&quot;debitCardAlerts\&quot;:true,\&quot;backToPortfolio\&quot;:true,\&quot;additionalCardsInfoLink\&quot;:false,\&quot;requestNewCard\&quot;:true,\&quot;blockUnblockCard\&quot;:true}}],\&quot;accountNickName\&quot;:\&quot;HEALTH SAVINGS ACCOUNT\&quot;,\&quot;accountRelationship\&quot;:\&quot;primary\&quot;,\&quot;entitlements\&quot;:{\&quot;canViewAccountProfile\&quot;:true,\&quot;unmaskCardNumber\&quot;:false,\&quot;helpAccountNotListed\&quot;:true,\&quot;viewLimits\&quot;:true,\&quot;activateCard\&quot;:true,\&quot;reportLostStolenCard\&quot;:true,\&quot;replaceCard\&quot;:true,\&quot;updatePin\&quot;:true,\&quot;addTravelNotice\&quot;:true,\&quot;debitCardAlerts\&quot;:true,\&quot;backToPortfolio\&quot;:true,\&quot;additionalCardsInfoLink\&quot;:false,\&quot;requestNewCard\&quot;:true,\&quot;blockUnblockCard\&quot;:true},\&quot;accountStatus\&quot;:{\&quot;accountStatusIndicator\&quot;:false,\&quot;accountStatusMessage\&quot;:null},\&quot;accountBalance\&quot;:902.32,\&quot;restrictions\&quot;:{\&quot;restrictedActions\&quot;:{\&quot;orderCardRestricted\&quot;:false,\&quot;replaceCardRestricted\&quot;:false,\&quot;activateCardRestricted\&quot;:false,\&quot;travelNoticeRestricted\&quot;:false,\&quot;managePinRestricted\&quot;:false,\&quot;reportLostOrStolenCardRestricted\&quot;:false,\&quot;lockUnlockCardRestricted\&quot;:false},\&quot;commonActionMessage\&quot;:null,\&quot;message\&quot;:\&quot;null\&quot;,\&quot;restriction\&quot;:[{\&quot;message\&quot;:\&quot;\&quot;,\&quot;restrictionType\&quot;:\&quot;MONEY_OUT\&quot;,\&quot;value\&quot;:false},{\&quot;message\&quot;:\&quot;\&quot;,\&quot;restrictionType\&quot;:\&quot;CARD_ORDER\&quot;,\&quot;value\&quot;:false},{\&quot;message\&quot;:\&quot;\&quot;,\&quot;restrictionType\&quot;:\&quot;CARD_CLOSING\&quot;,\&quot;value\&quot;:false},{\&quot;message\&quot;:\&quot;\&quot;,\&quot;restrictionType\&quot;:\&quot;RCB_ZERO\&quot;,\&quot;value\&quot;:false}]},\&quot;numberOfOwners\&quot;:1,\&quot;anyCardHasRestriction\&quot;:false},{\&quot;displayAccount\&quot;:true,\&quot;productCodeName\&quot;:\&quot;Health Savings\&quot;,\&quot;accountName\&quot;:null,\&quot;accountNumber\&quot;:\&quot;126751477\&quot;,\&quot;hiddenIndicator\&quot;:false,\&quot;exceptionGrantedForNewCard\&quot;:false,\&quot;accountUsers\&quot;:[{\&quot;middleName\&quot;:null,\&quot;lastName\&quot;:\&quot;O&apos; BURKET\&quot;,\&quot;firstName\&quot;:\&quot;ERIK\&quot;,\&quot;cardOrderInProcess\&quot;:false,\&quot;customerId\&quot;:\&quot;7L0NB1X10259088\&quot;,\&quot;serviceRequests\&quot;:null,\&quot;accountRole\&quot;:\&quot;Owner\&quot;,\&quot;cards\&quot;:[{\&quot;cvv2\&quot;:\&quot;\&quot;,\&quot;reIssueControlCode\&quot;:\&quot;7\&quot;,\&quot;cardReissueExpiryDate\&quot;:\&quot;0000\&quot;,\&quot;lastPlasticDate\&quot;:\&quot;200904\&quot;,\&quot;cardOpenDate\&quot;:\&quot;0719\&quot;,\&quot;externalStatusCode\&quot;:\&quot;\&quot;,\&quot;controlFlag\&quot;:0,\&quot;customerId\&quot;:\&quot;7L0NB1X10259088\&quot;,\&quot;cardActivated\&quot;:false,\&quot;cardId\&quot;:\&quot;1732212496\&quot;,\&quot;cardNumber\&quot;:\&quot;************0950\&quot;,\&quot;alternateName\&quot;:null,\&quot;holderFirstName\&quot;:\&quot;ERIK\&quot;,\&quot;holderMiddleInitial\&quot;:null,\&quot;holderLastName\&quot;:\&quot;O&apos; BURKET\&quot;,\&quot;accountNumberRelType\&quot;:null,\&quot;segmentTypeCode\&quot;:null,\&quot;segmentTypeDescription\&quot;:null,\&quot;productTypeCode\&quot;:null,\&quot;productTypeDescription\&quot;:null,\&quot;cardType\&quot;:\&quot;R\&quot;,\&quot;cardTypeId\&quot;:null,\&quot;cardTypeName\&quot;:null,\&quot;cardTypeImgUrl\&quot;:null,\&quot;status\&quot;:\&quot;\&quot;,\&quot;statusReasonCode\&quot;:null,\&quot;statusReasonDescription\&quot;:null,\&quot;accountNumber\&quot;:\&quot;126751477\&quot;,\&quot;plasticCount\&quot;:\&quot;1\&quot;,\&quot;activateCardAllowed\&quot;:true,\&quot;updatePinAllowed\&quot;:false,\&quot;replaceCardAllowed\&quot;:true,\&quot;reportLostStolenAllowed\&quot;:true,\&quot;travelNoticeAllowed\&quot;:false,\&quot;limits\&quot;:{\&quot;atmDailyLimit\&quot;:0,\&quot;purchaseDailyLimit\&quot;:10000,\&quot;cashAdvanceDailyLimit\&quot;:0,\&quot;cashTransferDailyLimit\&quot;:0},\&quot;balances\&quot;:{\&quot;atmBalance\&quot;:0,\&quot;purchaseBalance\&quot;:0,\&quot;cashAdvanceBalance\&quot;:0,\&quot;cashTransferBalance\&quot;:0},\&quot;expiryDate\&quot;:1696032000000,\&quot;pinLastChangedDate\&quot;:\&quot;2020-09-04\&quot;,\&quot;presentationInstrumentTypeCode\&quot;:\&quot;08\&quot;,\&quot;presentationInstrumentReplacementSequenceNumber\&quot;:\&quot;0001\&quot;,\&quot;cardRestrictionErrorMessage\&quot;:\&quot;\&quot;,\&quot;isReplaceCardPlaced\&quot;:false,\&quot;replaceCardPlacedDate\&quot;:null,\&quot;secondLineEmbossTextFdr\&quot;:null,\&quot;isLockUnlockAllowed\&quot;:true,\&quot;shippedOnDate\&quot;:null,\&quot;travelNoticeCount\&quot;:0,\&quot;lostStolenDate\&quot;:\&quot;999999\&quot;,\&quot;crossReferenceIdentifier\&quot;:\&quot;\&quot;,\&quot;dateLastStatusCodeChange\&quot;:\&quot;000000\&quot;,\&quot;consumerAccountClosedDate\&quot;:\&quot;00000000\&quot;,\&quot;presentationInstrumentStatusChangeDate\&quot;:\&quot;0001-01-01\&quot;,\&quot;isMultiStack\&quot;:false}],\&quot;userEntitlements\&quot;:{\&quot;canViewAccountProfile\&quot;:true,\&quot;unmaskCardNumber\&quot;:false,\&quot;helpAccountNotListed\&quot;:true,\&quot;viewLimits\&quot;:true,\&quot;activateCard\&quot;:true,\&quot;reportLostStolenCard\&quot;:true,\&quot;replaceCard\&quot;:true,\&quot;updatePin\&quot;:true,\&quot;addTravelNotice\&quot;:true,\&quot;debitCardAlerts\&quot;:true,\&quot;backToPortfolio\&quot;:true,\&quot;additionalCardsInfoLink\&quot;:false,\&quot;requestNewCard\&quot;:true,\&quot;blockUnblockCard\&quot;:true}}],\&quot;accountNickName\&quot;:\&quot;HEALTH SAVINGS ACCOUNT\&quot;,\&quot;accountRelationship\&quot;:\&quot;primary\&quot;,\&quot;entitlements\&quot;:{\&quot;canViewAccountProfile\&quot;:true,\&quot;unmaskCardNumber\&quot;:false,\&quot;helpAccountNotListed\&quot;:true,\&quot;viewLimits\&quot;:true,\&quot;activateCard\&quot;:true,\&quot;reportLostStolenCard\&quot;:true,\&quot;replaceCard\&quot;:true,\&quot;updatePin\&quot;:true,\&quot;addTravelNotice\&quot;:true,\&quot;debitCardAlerts\&quot;:true,\&quot;backToPortfolio\&quot;:true,\&quot;additionalCardsInfoLink\&quot;:false,\&quot;requestNewCard\&quot;:true,\&quot;blockUnblockCard\&quot;:true},\&quot;accountStatus\&quot;:{\&quot;accountStatusIndicator\&quot;:false,\&quot;accountStatusMessage\&quot;:null},\&quot;accountBalance\&quot;:null,\&quot;restrictions\&quot;:{\&quot;restrictedActions\&quot;:{\&quot;orderCardRestricted\&quot;:false,\&quot;replaceCardRestricted\&quot;:false,\&quot;activateCardRestricted\&quot;:false,\&quot;travelNoticeRestricted\&quot;:false,\&quot;managePinRestricted\&quot;:false,\&quot;reportLostOrStolenCardRestricted\&quot;:false,\&quot;lockUnlockCardRestricted\&quot;:false},\&quot;commonActionMessage\&quot;:null,\&quot;message\&quot;:\&quot;null\&quot;,\&quot;restriction\&quot;:[{\&quot;message\&quot;:\&quot;\&quot;,\&quot;restrictionType\&quot;:\&quot;MONEY_OUT\&quot;,\&quot;value\&quot;:false},{\&quot;message\&quot;:\&quot;\&quot;,\&quot;restrictionType\&quot;:\&quot;CARD_ORDER\&quot;,\&quot;value\&quot;:false},{\&quot;message\&quot;:\&quot;\&quot;,\&quot;restrictionType\&quot;:\&quot;CARD_CLOSING\&quot;,\&quot;value\&quot;:false},{\&quot;message\&quot;:\&quot;\&quot;,\&quot;restrictionType\&quot;:\&quot;RCB_ZERO\&quot;,\&quot;value\&quot;:false}]},\&quot;numberOfOwners\&quot;:1,\&quot;anyCardHasRestriction\&quot;:false,\&quot;sysMsgs\&quot;:{\&quot;sysMsg\&quot;:[{\&quot;detail\&quot;:\&quot;Daily limit an remaining amount views are currently unavailable. Please try again later.\&quot;,\&quot;source\&quot;:\&quot;Balance\&quot;,\&quot;code\&quot;:\&quot;ACCOUNT_SYSMSG_5000\&quot;,\&quot;type\&quot;:\&quot;error\&quot;}]}},{\&quot;displayAccount\&quot;:true,\&quot;productCodeName\&quot;:\&quot;Cash Account\&quot;,\&quot;accountName\&quot;:null,\&quot;accountNumber\&quot;:\&quot;X30461317\&quot;,\&quot;hiddenIndicator\&quot;:false,\&quot;exceptionGrantedForNewCard\&quot;:false,\&quot;accountUsers\&quot;:[{\&quot;middleName\&quot;:null,\&quot;lastName\&quot;:\&quot;O&apos; BURKET\&quot;,\&quot;firstName\&quot;:\&quot;ERIK\&quot;,\&quot;cardOrderInProcess\&quot;:false,\&quot;customerId\&quot;:\&quot;7L0NB1X10259088\&quot;,\&quot;serviceRequests\&quot;:null,\&quot;accountRole\&quot;:\&quot;Owner\&quot;,\&quot;cards\&quot;:[],\&quot;userEntitlements\&quot;:{\&quot;canViewAccountProfile\&quot;:true,\&quot;unmaskCardNumber\&quot;:false,\&quot;helpAccountNotListed\&quot;:true,\&quot;viewLimits\&quot;:true,\&quot;activateCard\&quot;:true,\&quot;reportLostStolenCard\&quot;:true,\&quot;replaceCard\&quot;:true,\&quot;updatePin\&quot;:true,\&quot;addTravelNotice\&quot;:true,\&quot;debitCardAlerts\&quot;:true,\&quot;backToPortfolio\&quot;:true,\&quot;additionalCardsInfoLink\&quot;:false,\&quot;requestNewCard\&quot;:true,\&quot;blockUnblockCard\&quot;:true}}],\&quot;accountNickName\&quot;:\&quot;INDIVIDUAL\&quot;,\&quot;accountRelationship\&quot;:\&quot;primary\&quot;,\&quot;entitlements\&quot;:{\&quot;canViewAccountProfile\&quot;:true,\&quot;unmaskCardNumber\&quot;:false,\&quot;helpAccountNotListed\&quot;:true,\&quot;viewLimits\&quot;:true,\&quot;activateCard\&quot;:true,\&quot;reportLostStolenCard\&quot;:true,\&quot;replaceCard\&quot;:true,\&quot;updatePin\&quot;:true,\&quot;addTravelNotice\&quot;:true,\&quot;debitCardAlerts\&quot;:true,\&quot;backToPortfolio\&quot;:true,\&quot;additionalCardsInfoLink\&quot;:false,\&quot;requestNewCard\&quot;:true,\&quot;blockUnblockCard\&quot;:true},\&quot;accountStatus\&quot;:{\&quot;accountStatusIndicator\&quot;:false,\&quot;accountStatusMessage\&quot;:null},\&quot;accountBalance\&quot;:null,\&quot;restrictions\&quot;:{\&quot;restrictedActions\&quot;:{\&quot;orderCardRestricted\&quot;:false,\&quot;replaceCardRestricted\&quot;:false,\&quot;activateCardRestricted\&quot;:false,\&quot;travelNoticeRestricted\&quot;:false,\&quot;managePinRestricted\&quot;:false,\&quot;reportLostOrStolenCardRestricted\&quot;:false,\&quot;lockUnlockCardRestricted\&quot;:false},\&quot;commonActionMessage\&quot;:null,\&quot;message\&quot;:\&quot;null\&quot;,\&quot;restriction\&quot;:[{\&quot;message\&quot;:\&quot;\&quot;,\&quot;restrictionType\&quot;:\&quot;MONEY_OUT\&quot;,\&quot;value\&quot;:false},{\&quot;message\&quot;:\&quot;\&quot;,\&quot;restrictionType\&quot;:\&quot;CARD_ORDER\&quot;,\&quot;value\&quot;:false},{\&quot;message\&quot;:\&quot;\&quot;,\&quot;restrictionType\&quot;:\&quot;CARD_CLOSING\&quot;,\&quot;value\&quot;:false},{\&quot;message\&quot;:\&quot;\&quot;,\&quot;restrictionType\&quot;:\&quot;RCB_ZERO\&quot;,\&quot;value\&quot;:false}]},\&quot;numberOfOwners\&quot;:1,\&quot;anyCardHasRestriction\&quot;:false,\&quot;sysMsgs\&quot;:{\&quot;sysMsg\&quot;:[{\&quot;detail\&quot;:\&quot;Daily limit an remaining amount views are currently unavailable. Please try again later.\&quot;,\&quot;source\&quot;:\&quot;Balance\&quot;,\&quot;code\&quot;:\&quot;ACCOUNT_SYSMSG_5000\&quot;,\&quot;type\&quot;:\&quot;error\&quot;}]}},{\&quot;displayAccount\&quot;:true,\&quot;productCodeName\&quot;:\&quot;Brokerage\&quot;,\&quot;accountName\&quot;:null,\&quot;accountNumber\&quot;:\&quot;X30461316\&quot;,\&quot;hiddenIndicator\&quot;:false,\&quot;exceptionGrantedForNewCard\&quot;:false,\&quot;accountUsers\&quot;:[{\&quot;middleName\&quot;:null,\&quot;lastName\&quot;:\&quot;O&apos; BURKET\&quot;,\&quot;firstName\&quot;:\&quot;ERIK\&quot;,\&quot;cardOrderInProcess\&quot;:false,\&quot;customerId\&quot;:\&quot;7L0NB1X10259088\&quot;,\&quot;serviceRequests\&quot;:null,\&quot;accountRole\&quot;:\&quot;Owner\&quot;,\&quot;cards\&quot;:[],\&quot;userEntitlements\&quot;:{\&quot;canViewAccountProfile\&quot;:true,\&quot;unmaskCardNumber\&quot;:false,\&quot;helpAccountNotListed\&quot;:true,\&quot;viewLimits\&quot;:true,\&quot;activateCard\&quot;:true,\&quot;reportLostStolenCard\&quot;:true,\&quot;replaceCard\&quot;:true,\&quot;updatePin\&quot;:true,\&quot;addTravelNotice\&quot;:true,\&quot;debitCardAlerts\&quot;:true,\&quot;backToPortfolio\&quot;:true,\&quot;additionalCardsInfoLink\&quot;:false,\&quot;requestNewCard\&quot;:true,\&quot;blockUnblockCard\&quot;:true}}],\&quot;accountNickName\&quot;:\&quot;INDIVIDUAL\&quot;,\&quot;accountRelationship\&quot;:\&quot;primary\&quot;,\&quot;entitlements\&quot;:{\&quot;canViewAccountProfile\&quot;:true,\&quot;unmaskCardNumber\&quot;:false,\&quot;helpAccountNotListed\&quot;:true,\&quot;viewLimits\&quot;:true,\&quot;activateCard\&quot;:true,\&quot;reportLostStolenCard\&quot;:true,\&quot;replaceCard\&quot;:true,\&quot;updatePin\&quot;:true,\&quot;addTravelNotice\&quot;:true,\&quot;debitCardAlerts\&quot;:true,\&quot;backToPortfolio\&quot;:true,\&quot;additionalCardsInfoLink\&quot;:false,\&quot;requestNewCard\&quot;:true,\&quot;blockUnblockCard\&quot;:true},\&quot;accountStatus\&quot;:{\&quot;accountStatusIndicator\&quot;:false,\&quot;accountStatusMessage\&quot;:null},\&quot;accountBalance\&quot;:null,\&quot;restrictions\&quot;:{\&quot;restrictedActions\&quot;:{\&quot;orderCardRestricted\&quot;:false,\&quot;replaceCardRestricted\&quot;:false,\&quot;activateCardRestricted\&quot;:false,\&quot;travelNoticeRestricted\&quot;:false,\&quot;managePinRestricted\&quot;:false,\&quot;reportLostOrStolenCardRestricted\&quot;:false,\&quot;lockUnlockCardRestricted\&quot;:false},\&quot;commonActionMessage\&quot;:null,\&quot;message\&quot;:\&quot;null\&quot;,\&quot;restriction\&quot;:[{\&quot;message\&quot;:\&quot;\&quot;,\&quot;restrictionType\&quot;:\&quot;MONEY_OUT\&quot;,\&quot;value\&quot;:false},{\&quot;message\&quot;:\&quot;\&quot;,\&quot;restrictionType\&quot;:\&quot;CARD_ORDER\&quot;,\&quot;value\&quot;:false},{\&quot;message\&quot;:\&quot;\&quot;,\&quot;restrictionType\&quot;:\&quot;CARD_CLOSING\&quot;,\&quot;value\&quot;:false},{\&quot;message\&quot;:\&quot;\&quot;,\&quot;restrictionType\&quot;:\&quot;RCB_ZERO\&quot;,\&quot;value\&quot;:false}]},\&quot;numberOfOwners\&quot;:1,\&quot;anyCardHasRestriction\&quot;:false,\&quot;sysMsgs\&quot;:{\&quot;sysMsg\&quot;:[{\&quot;detail\&quot;:\&quot;Daily limit an remaining amount views are currently unavailable. Please try again later.\&quot;,\&quot;source\&quot;:\&quot;Balance\&quot;,\&quot;code\&quot;:\&quot;ACCOUNT_SYSMSG_5000\&quot;,\&quot;type\&quot;:\&quot;error\&quot;}]}},{\&quot;displayAccount\&quot;:true,\&quot;productCodeName\&quot;:\&quot;Brokerage\&quot;,\&quot;accountName\&quot;:null,\&quot;accountNumber\&quot;:\&quot;X25982729\&quot;,\&quot;hiddenIndicator\&quot;:false,\&quot;exceptionGrantedForNewCard\&quot;:false,\&quot;accountUsers\&quot;:[{\&quot;middleName\&quot;:null,\&quot;lastName\&quot;:\&quot;O&apos; BURKET\&quot;,\&quot;firstName\&quot;:\&quot;ERIK\&quot;,\&quot;cardOrderInProcess\&quot;:false,\&quot;customerId\&quot;:\&quot;7L0NB1X10259088\&quot;,\&quot;serviceRequests\&quot;:null,\&quot;accountRole\&quot;:\&quot;Owner\&quot;,\&quot;cards\&quot;:[],\&quot;userEntitlements\&quot;:{\&quot;canViewAccountProfile\&quot;:true,\&quot;unmaskCardNumber\&quot;:false,\&quot;helpAccountNotListed\&quot;:true,\&quot;viewLimits\&quot;:true,\&quot;activateCard\&quot;:true,\&quot;reportLostStolenCard\&quot;:true,\&quot;replaceCard\&quot;:true,\&quot;updatePin\&quot;:true,\&quot;addTravelNotice\&quot;:true,\&quot;debitCardAlerts\&quot;:true,\&quot;backToPortfolio\&quot;:true,\&quot;additionalCardsInfoLink\&quot;:false,\&quot;requestNewCard\&quot;:true,\&quot;blockUnblockCard\&quot;:true}}],\&quot;accountNickName\&quot;:\&quot;INDIVIDUAL\&quot;,\&quot;accountRelationship\&quot;:\&quot;primary\&quot;,\&quot;entitlements\&quot;:{\&quot;canViewAccountProfile\&quot;:true,\&quot;unmaskCardNumber\&quot;:false,\&quot;helpAccountNotListed\&quot;:true,\&quot;viewLimits\&quot;:true,\&quot;activateCard\&quot;:true,\&quot;reportLostStolenCard\&quot;:true,\&quot;replaceCard\&quot;:true,\&quot;updatePin\&quot;:true,\&quot;addTravelNotice\&quot;:true,\&quot;debitCardAlerts\&quot;:true,\&quot;backToPortfolio\&quot;:true,\&quot;additionalCardsInfoLink\&quot;:false,\&quot;requestNewCard\&quot;:true,\&quot;blockUnblockCard\&quot;:true},\&quot;accountStatus\&quot;:{\&quot;accountStatusIndicator\&quot;:false,\&quot;accountStatusMessage\&quot;:null},\&quot;accountBalance\&quot;:null,\&quot;restrictions\&quot;:{\&quot;restrictedActions\&quot;:{\&quot;orderCardRestricted\&quot;:false,\&quot;replaceCardRestricted\&quot;:false,\&quot;activateCardRestricted\&quot;:false,\&quot;travelNoticeRestricted\&quot;:false,\&quot;managePinRestricted\&quot;:false,\&quot;reportLostOrStolenCardRestricted\&quot;:false,\&quot;lockUnlockCardRestricted\&quot;:false},\&quot;commonActionMessage\&quot;:null,\&quot;message\&quot;:\&quot;null\&quot;,\&quot;restriction\&quot;:[{\&quot;message\&quot;:\&quot;\&quot;,\&quot;restrictionType\&quot;:\&quot;MONEY_OUT\&quot;,\&quot;value\&quot;:false},{\&quot;message\&quot;:\&quot;\&quot;,\&quot;restrictionType\&quot;:\&quot;CARD_ORDER\&quot;,\&quot;value\&quot;:false},{\&quot;message\&quot;:\&quot;\&quot;,\&quot;restrictionType\&quot;:\&quot;CARD_CLOSING\&quot;,\&quot;value\&quot;:false},{\&quot;message\&quot;:\&quot;\&quot;,\&quot;restrictionType\&quot;:\&quot;RCB_ZERO\&quot;,\&quot;value\&quot;:false}]},\&quot;numberOfOwners\&quot;:1,\&quot;anyCardHasRestriction\&quot;:false,\&quot;sysMsgs\&quot;:{\&quot;sysMsg\&quot;:[{\&quot;detail\&quot;:\&quot;Daily limit an remaining amount views are currently unavailable. Please try again later.\&quot;,\&quot;source\&quot;:\&quot;Balance\&quot;,\&quot;code\&quot;:\&quot;ACCOUNT_SYSMSG_5000\&quot;,\&quot;type\&quot;:\&quot;error\&quot;}]}},{\&quot;displayAccount\&quot;:true,\&quot;productCodeName\&quot;:\&quot;Brokerage\&quot;,\&quot;accountName\&quot;:null,\&quot;accountNumber\&quot;:\&quot;X21986944\&quot;,\&quot;hiddenIndicator\&quot;:false,\&quot;exceptionGrantedForNewCard\&quot;:false,\&quot;accountUsers\&quot;:[{\&quot;middleName\&quot;:null,\&quot;lastName\&quot;:\&quot;O&apos; BURKET\&quot;,\&quot;firstName\&quot;:\&quot;ERIK\&quot;,\&quot;cardOrderInProcess\&quot;:false,\&quot;customerId\&quot;:\&quot;7L0NB1X10259088\&quot;,\&quot;serviceRequests\&quot;:null,\&quot;accountRole\&quot;:\&quot;Owner\&quot;,\&quot;cards\&quot;:[{\&quot;cvv2\&quot;:\&quot;\&quot;,\&quot;reIssueControlCode\&quot;:\&quot;0\&quot;,\&quot;cardReissueExpiryDate\&quot;:\&quot;0000\&quot;,\&quot;lastPlasticDate\&quot;:\&quot;190523\&quot;,\&quot;cardOpenDate\&quot;:\&quot;1011\&quot;,\&quot;externalStatusCode\&quot;:\&quot;\&quot;,\&quot;controlFlag\&quot;:0,\&quot;customerId\&quot;:\&quot;7L0NB1X10259088\&quot;,\&quot;cardActivated\&quot;:true,\&quot;cardId\&quot;:\&quot;3271282028\&quot;,\&quot;cardNumber\&quot;:\&quot;************0231\&quot;,\&quot;alternateName\&quot;:null,\&quot;holderFirstName\&quot;:\&quot;NEW CARD ACCT\&quot;,\&quot;holderMiddleInitial\&quot;:null,\&quot;holderLastName\&quot;:\&quot;TEST\&quot;,\&quot;accountNumberRelType\&quot;:null,\&quot;segmentTypeCode\&quot;:null,\&quot;segmentTypeDescription\&quot;:null,\&quot;productTypeCode\&quot;:null,\&quot;productTypeDescription\&quot;:null,\&quot;cardType\&quot;:\&quot;D\&quot;,\&quot;cardTypeId\&quot;:null,\&quot;cardTypeName\&quot;:null,\&quot;cardTypeImgUrl\&quot;:null,\&quot;status\&quot;:\&quot;\&quot;,\&quot;statusReasonCode\&quot;:null,\&quot;statusReasonDescription\&quot;:null,\&quot;accountNumber\&quot;:\&quot;X21986944\&quot;,\&quot;plasticCount\&quot;:\&quot;1\&quot;,\&quot;activateCardAllowed\&quot;:false,\&quot;updatePinAllowed\&quot;:true,\&quot;replaceCardAllowed\&quot;:true,\&quot;reportLostStolenAllowed\&quot;:true,\&quot;travelNoticeAllowed\&quot;:true,\&quot;limits\&quot;:{\&quot;atmDailyLimit\&quot;:99999,\&quot;purchaseDailyLimit\&quot;:99999,\&quot;cashAdvanceDailyLimit\&quot;:99999,\&quot;cashTransferDailyLimit\&quot;:99999},\&quot;balances\&quot;:{\&quot;atmBalance\&quot;:27.2,\&quot;purchaseBalance\&quot;:27.2,\&quot;cashAdvanceBalance\&quot;:27.2,\&quot;cashTransferBalance\&quot;:27.2},\&quot;expiryDate\&quot;:1617148800000,\&quot;pinLastChangedDate\&quot;:\&quot;2020-06-29\&quot;,\&quot;presentationInstrumentTypeCode\&quot;:\&quot;08\&quot;,\&quot;presentationInstrumentReplacementSequenceNumber\&quot;:\&quot;0008\&quot;,\&quot;cardRestrictionErrorMessage\&quot;:\&quot;\&quot;,\&quot;isReplaceCardPlaced\&quot;:false,\&quot;replaceCardPlacedDate\&quot;:null,\&quot;secondLineEmbossTextFdr\&quot;:null,\&quot;isLockUnlockAllowed\&quot;:true,\&quot;shippedOnDate\&quot;:null,\&quot;travelNoticeCount\&quot;:0,\&quot;lostStolenDate\&quot;:\&quot;999999\&quot;,\&quot;crossReferenceIdentifier\&quot;:\&quot;************0314\&quot;,\&quot;dateLastStatusCodeChange\&quot;:\&quot;201112\&quot;,\&quot;consumerAccountClosedDate\&quot;:\&quot;00000000\&quot;,\&quot;presentationInstrumentStatusChangeDate\&quot;:\&quot;0001-01-01\&quot;,\&quot;isMultiStack\&quot;:false},{\&quot;cvv2\&quot;:\&quot;\&quot;,\&quot;reIssueControlCode\&quot;:\&quot;7\&quot;,\&quot;cardReissueExpiryDate\&quot;:\&quot;0000\&quot;,\&quot;lastPlasticDate\&quot;:\&quot;200731\&quot;,\&quot;cardOpenDate\&quot;:\&quot;1011\&quot;,\&quot;externalStatusCode\&quot;:\&quot;\&quot;,\&quot;controlFlag\&quot;:0,\&quot;customerId\&quot;:\&quot;7L0NB1X10259088\&quot;,\&quot;cardActivated\&quot;:false,\&quot;cardId\&quot;:\&quot;637688390\&quot;,\&quot;cardNumber\&quot;:\&quot;************0314\&quot;,\&quot;alternateName\&quot;:null,\&quot;holderFirstName\&quot;:\&quot; CARD\&quot;,\&quot;holderMiddleInitial\&quot;:null,\&quot;holderLastName\&quot;:\&quot;TEST\&quot;,\&quot;accountNumberRelType\&quot;:null,\&quot;segmentTypeCode\&quot;:null,\&quot;segmentTypeDescription\&quot;:null,\&quot;productTypeCode\&quot;:null,\&quot;productTypeDescription\&quot;:null,\&quot;cardType\&quot;:\&quot;D\&quot;,\&quot;cardTypeId\&quot;:null,\&quot;cardTypeName\&quot;:null,\&quot;cardTypeImgUrl\&quot;:null,\&quot;status\&quot;:\&quot;\&quot;,\&quot;statusReasonCode\&quot;:null,\&quot;statusReasonDescription\&quot;:null,\&quot;accountNumber\&quot;:\&quot;X21986944\&quot;,\&quot;plasticCount\&quot;:\&quot;1\&quot;,\&quot;activateCardAllowed\&quot;:true,\&quot;updatePinAllowed\&quot;:false,\&quot;replaceCardAllowed\&quot;:true,\&quot;reportLostStolenAllowed\&quot;:true,\&quot;travelNoticeAllowed\&quot;:false,\&quot;limits\&quot;:{\&quot;atmDailyLimit\&quot;:99999,\&quot;purchaseDailyLimit\&quot;:99999,\&quot;cashAdvanceDailyLimit\&quot;:99999,\&quot;cashTransferDailyLimit\&quot;:99999},\&quot;balances\&quot;:{\&quot;atmBalance\&quot;:27.2,\&quot;purchaseBalance\&quot;:27.2,\&quot;cashAdvanceBalance\&quot;:27.2,\&quot;cashTransferBalance\&quot;:27.2},\&quot;expiryDate\&quot;:1693440000000,\&quot;pinLastChangedDate\&quot;:\&quot;2020-02-28\&quot;,\&quot;presentationInstrumentTypeCode\&quot;:\&quot;08\&quot;,\&quot;presentationInstrumentReplacementSequenceNumber\&quot;:\&quot;0035\&quot;,\&quot;cardRestrictionErrorMessage\&quot;:\&quot;\&quot;,\&quot;isReplaceCardPlaced\&quot;:false,\&quot;replaceCardPlacedDate\&quot;:null,\&quot;secondLineEmbossTextFdr\&quot;:null,\&quot;isLockUnlockAllowed\&quot;:true,\&quot;shippedOnDate\&quot;:null,\&quot;travelNoticeCount\&quot;:0,\&quot;lostStolenDate\&quot;:\&quot;999999\&quot;,\&quot;crossReferenceIdentifier\&quot;:\&quot;************0322\&quot;,\&quot;dateLastStatusCodeChange\&quot;:\&quot;200724\&quot;,\&quot;consumerAccountClosedDate\&quot;:\&quot;00000000\&quot;,\&quot;presentationInstrumentStatusChangeDate\&quot;:\&quot;0001-01-01\&quot;,\&quot;isMultiStack\&quot;:false},{\&quot;cvv2\&quot;:\&quot;\&quot;,\&quot;reIssueControlCode\&quot;:\&quot;7\&quot;,\&quot;cardReissueExpiryDate\&quot;:\&quot;0000\&quot;,\&quot;lastPlasticDate\&quot;:\&quot;201008\&quot;,\&quot;cardOpenDate\&quot;:\&quot;1018\&quot;,\&quot;externalStatusCode\&quot;:\&quot;\&quot;,\&quot;controlFlag\&quot;:0,\&quot;customerId\&quot;:\&quot;7L0NB1X10259088\&quot;,\&quot;cardActivated\&quot;:false,\&quot;cardId\&quot;:\&quot;2293999762\&quot;,\&quot;cardNumber\&quot;:\&quot;************0976\&quot;,\&quot;alternateName\&quot;:null,\&quot;holderFirstName\&quot;:\&quot;TEST AO\&quot;,\&quot;holderMiddleInitial\&quot;:null,\&quot;holderLastName\&quot;:\&quot;TEST\&quot;,\&quot;accountNumberRelType\&quot;:null,\&quot;segmentTypeCode\&quot;:null,\&quot;segmentTypeDescription\&quot;:null,\&quot;productTypeCode\&quot;:null,\&quot;productTypeDescription\&quot;:null,\&quot;cardType\&quot;:\&quot;R\&quot;,\&quot;cardTypeId\&quot;:null,\&quot;cardTypeName\&quot;:null,\&quot;cardTypeImgUrl\&quot;:null,\&quot;status\&quot;:\&quot;\&quot;,\&quot;statusReasonCode\&quot;:null,\&quot;statusReasonDescription\&quot;:null,\&quot;accountNumber\&quot;:\&quot;X21986944\&quot;,\&quot;plasticCount\&quot;:\&quot;1\&quot;,\&quot;activateCardAllowed\&quot;:true,\&quot;updatePinAllowed\&quot;:false,\&quot;replaceCardAllowed\&quot;:true,\&quot;reportLostStolenAllowed\&quot;:true,\&quot;travelNoticeAllowed\&quot;:false,\&quot;limits\&quot;:{\&quot;atmDailyLimit\&quot;:0,\&quot;purchaseDailyLimit\&quot;:10000,\&quot;cashAdvanceDailyLimit\&quot;:0,\&quot;cashTransferDailyLimit\&quot;:0},\&quot;balances\&quot;:{\&quot;atmBalance\&quot;:0,\&quot;purchaseBalance\&quot;:27.2,\&quot;cashAdvanceBalance\&quot;:0,\&quot;cashTransferBalance\&quot;:0},\&quot;expiryDate\&quot;:1698710400000,\&quot;pinLastChangedDate\&quot;:\&quot;2020-10-08\&quot;,\&quot;presentationInstrumentTypeCode\&quot;:\&quot;08\&quot;,\&quot;presentationInstrumentReplacementSequenceNumber\&quot;:\&quot;0001\&quot;,\&quot;cardRestrictionErrorMessage\&quot;:\&quot;\&quot;,\&quot;isReplaceCardPlaced\&quot;:false,\&quot;replaceCardPlacedDate\&quot;:null,\&quot;secondLineEmbossTextFdr\&quot;:null,\&quot;isLockUnlockAllowed\&quot;:true,\&quot;shippedOnDate\&quot;:null,\&quot;travelNoticeCount\&quot;:0,\&quot;lostStolenDate\&quot;:\&quot;999999\&quot;,\&quot;crossReferenceIdentifier\&quot;:\&quot;\&quot;,\&quot;dateLastStatusCodeChange\&quot;:\&quot;000000\&quot;,\&quot;consumerAccountClosedDate\&quot;:\&quot;00000000\&quot;,\&quot;presentationInstrumentStatusChangeDate\&quot;:\&quot;0001-01-01\&quot;,\&quot;isMultiStack\&quot;:false}],\&quot;userEntitlements\&quot;:{\&quot;canViewAccountProfile\&quot;:true,\&quot;unmaskCardNumber\&quot;:false,\&quot;helpAccountNotListed\&quot;:true,\&quot;viewLimits\&quot;:true,\&quot;activateCard\&quot;:true,\&quot;reportLostStolenCard\&quot;:true,\&quot;replaceCard\&quot;:true,\&quot;updatePin\&quot;:true,\&quot;addTravelNotice\&quot;:true,\&quot;debitCardAlerts\&quot;:true,\&quot;backToPortfolio\&quot;:true,\&quot;additionalCardsInfoLink\&quot;:false,\&quot;requestNewCard\&quot;:true,\&quot;blockUnblockCard\&quot;:true}}],\&quot;accountNickName\&quot;:\&quot;INDIVIDUAL - TOD\&quot;,\&quot;accountRelationship\&quot;:\&quot;primary\&quot;,\&quot;entitlements\&quot;:{\&quot;canViewAccountProfile\&quot;:true,\&quot;unmaskCardNumber\&quot;:false,\&quot;helpAccountNotListed\&quot;:true,\&quot;viewLimits\&quot;:true,\&quot;activateCard\&quot;:true,\&quot;reportLostStolenCard\&quot;:true,\&quot;replaceCard\&quot;:true,\&quot;updatePin\&quot;:true,\&quot;addTravelNotice\&quot;:true,\&quot;debitCardAlerts\&quot;:true,\&quot;backToPortfolio\&quot;:true,\&quot;additionalCardsInfoLink\&quot;:false,\&quot;requestNewCard\&quot;:true,\&quot;blockUnblockCard\&quot;:true},\&quot;accountStatus\&quot;:{\&quot;accountStatusIndicator\&quot;:false,\&quot;accountStatusMessage\&quot;:null},\&quot;accountBalance\&quot;:27.2,\&quot;restrictions\&quot;:{\&quot;restrictedActions\&quot;:{\&quot;orderCardRestricted\&quot;:false,\&quot;replaceCardRestricted\&quot;:false,\&quot;activateCardRestricted\&quot;:false,\&quot;travelNoticeRestricted\&quot;:false,\&quot;managePinRestricted\&quot;:false,\&quot;reportLostOrStolenCardRestricted\&quot;:false,\&quot;lockUnlockCardRestricted\&quot;:false},\&quot;commonActionMessage\&quot;:null,\&quot;message\&quot;:\&quot;null\&quot;,\&quot;restriction\&quot;:[{\&quot;message\&quot;:\&quot;\&quot;,\&quot;restrictionType\&quot;:\&quot;MONEY_OUT\&quot;,\&quot;value\&quot;:false},{\&quot;message\&quot;:\&quot;\&quot;,\&quot;restrictionType\&quot;:\&quot;CARD_ORDER\&quot;,\&quot;value\&quot;:false},{\&quot;message\&quot;:\&quot;\&quot;,\&quot;restrictionType\&quot;:\&quot;CARD_CLOSING\&quot;,\&quot;value\&quot;:false},{\&quot;message\&quot;:\&quot;\&quot;,\&quot;restrictionType\&quot;:\&quot;RCB_ZERO\&quot;,\&quot;value\&quot;:false}]},\&quot;numberOfOwners\&quot;:1,\&quot;anyCardHasRestriction\&quot;:false},{\&quot;displayAccount\&quot;:true,\&quot;productCodeName\&quot;:\&quot;Brokerage\&quot;,\&quot;accountName\&quot;:null,\&quot;accountNumber\&quot;:\&quot;X15677129\&quot;,\&quot;hiddenIndicator\&quot;:false,\&quot;exceptionGrantedForNewCard\&quot;:false,\&quot;accountUsers\&quot;:[{\&quot;middleName\&quot;:null,\&quot;lastName\&quot;:\&quot;O&apos; BURKET\&quot;,\&quot;firstName\&quot;:\&quot;ERIK\&quot;,\&quot;cardOrderInProcess\&quot;:false,\&quot;customerId\&quot;:\&quot;7L0NB1X10259088\&quot;,\&quot;serviceRequests\&quot;:null,\&quot;accountRole\&quot;:\&quot;Owner\&quot;,\&quot;cards\&quot;:[],\&quot;userEntitlements\&quot;:{\&quot;canViewAccountProfile\&quot;:true,\&quot;unmaskCardNumber\&quot;:false,\&quot;helpAccountNotListed\&quot;:true,\&quot;viewLimits\&quot;:true,\&quot;activateCard\&quot;:true,\&quot;reportLostStolenCard\&quot;:true,\&quot;replaceCard\&quot;:true,\&quot;updatePin\&quot;:true,\&quot;addTravelNotice\&quot;:true,\&quot;debitCardAlerts\&quot;:true,\&quot;backToPortfolio\&quot;:true,\&quot;additionalCardsInfoLink\&quot;:false,\&quot;requestNewCard\&quot;:true,\&quot;blockUnblockCard\&quot;:true}}],\&quot;accountNickName\&quot;:\&quot;INDIVIDUAL - TOD\&quot;,\&quot;accountRelationship\&quot;:\&quot;primary\&quot;,\&quot;entitlements\&quot;:{\&quot;canViewAccountProfile\&quot;:true,\&quot;unmaskCardNumber\&quot;:false,\&quot;helpAccountNotListed\&quot;:true,\&quot;viewLimits\&quot;:true,\&quot;activateCard\&quot;:true,\&quot;reportLostStolenCard\&quot;:true,\&quot;replaceCard\&quot;:true,\&quot;updatePin\&quot;:true,\&quot;addTravelNotice\&quot;:true,\&quot;debitCardAlerts\&quot;:true,\&quot;backToPortfolio\&quot;:true,\&quot;additionalCardsInfoLink\&quot;:false,\&quot;requestNewCard\&quot;:true,\&quot;blockUnblockCard\&quot;:true},\&quot;accountStatus\&quot;:{\&quot;accountStatusIndicator\&quot;:false,\&quot;accountStatusMessage\&quot;:null},\&quot;accountBalance\&quot;:1004.12,\&quot;restrictions\&quot;:{\&quot;restrictedActions\&quot;:{\&quot;orderCardRestricted\&quot;:false,\&quot;replaceCardRestricted\&quot;:false,\&quot;activateCardRestricted\&quot;:false,\&quot;travelNoticeRestricted\&quot;:false,\&quot;managePinRestricted\&quot;:false,\&quot;reportLostOrStolenCardRestricted\&quot;:false,\&quot;lockUnlockCardRestricted\&quot;:false},\&quot;commonActionMessage\&quot;:null,\&quot;message\&quot;:\&quot;null\&quot;,\&quot;restriction\&quot;:[{\&quot;message\&quot;:\&quot;\&quot;,\&quot;restrictionType\&quot;:\&quot;MONEY_OUT\&quot;,\&quot;value\&quot;:false},{\&quot;message\&quot;:\&quot;\&quot;,\&quot;restrictionType\&quot;:\&quot;CARD_ORDER\&quot;,\&quot;value\&quot;:false},{\&quot;message\&quot;:\&quot;\&quot;,\&quot;restrictionType\&quot;:\&quot;CARD_CLOSING\&quot;,\&quot;value\&quot;:false},{\&quot;message\&quot;:\&quot;\&quot;,\&quot;restrictionType\&quot;:\&quot;RCB_ZERO\&quot;,\&quot;value\&quot;:false}]},\&quot;numberOfOwners\&quot;:1,\&quot;anyCardHasRestriction\&quot;:false},{\&quot;displayAccount\&quot;:true,\&quot;productCodeName\&quot;:\&quot;Health Savings\&quot;,\&quot;accountName\&quot;:null,\&quot;accountNumber\&quot;:\&quot;120799462\&quot;,\&quot;hiddenIndicator\&quot;:false,\&quot;exceptionGrantedForNewCard\&quot;:false,\&quot;accountUsers\&quot;:[{\&quot;middleName\&quot;:null,\&quot;lastName\&quot;:\&quot;O&apos; BURKET\&quot;,\&quot;firstName\&quot;:\&quot;ERIK\&quot;,\&quot;cardOrderInProcess\&quot;:false,\&quot;customerId\&quot;:\&quot;7L0NB1X10259088\&quot;,\&quot;serviceRequests\&quot;:null,\&quot;accountRole\&quot;:\&quot;Owner\&quot;,\&quot;cards\&quot;:[],\&quot;userEntitlements\&quot;:{\&quot;canViewAccountProfile\&quot;:true,\&quot;unmaskCardNumber\&quot;:false,\&quot;helpAccountNotListed\&quot;:true,\&quot;viewLimits\&quot;:true,\&quot;activateCard\&quot;:true,\&quot;reportLostStolenCard\&quot;:true,\&quot;replaceCard\&quot;:true,\&quot;updatePin\&quot;:true,\&quot;addTravelNotice\&quot;:true,\&quot;debitCardAlerts\&quot;:true,\&quot;backToPortfolio\&quot;:true,\&quot;additionalCardsInfoLink\&quot;:false,\&quot;requestNewCard\&quot;:true,\&quot;blockUnblockCard\&quot;:true}}],\&quot;accountNickName\&quot;:\&quot;HEALTH SAVINGS ACCOUNT\&quot;,\&quot;accountRelationship\&quot;:\&quot;primary\&quot;,\&quot;entitlements\&quot;:{\&quot;canViewAccountProfile\&quot;:true,\&quot;unmaskCardNumber\&quot;:false,\&quot;helpAccountNotListed\&quot;:true,\&quot;viewLimits\&quot;:true,\&quot;activateCard\&quot;:true,\&quot;reportLostStolenCard\&quot;:true,\&quot;replaceCard\&quot;:true,\&quot;updatePin\&quot;:true,\&quot;addTravelNotice\&quot;:true,\&quot;debitCardAlerts\&quot;:true,\&quot;backToPortfolio\&quot;:true,\&quot;additionalCardsInfoLink\&quot;:false,\&quot;requestNewCard\&quot;:true,\&quot;blockUnblockCard\&quot;:true},\&quot;accountStatus\&quot;:{\&quot;accountStatusIndicator\&quot;:false,\&quot;accountStatusMessage\&quot;:null},\&quot;accountBalance\&quot;:null,\&quot;restrictions\&quot;:{\&quot;restrictedActions\&quot;:{\&quot;orderCardRestricted\&quot;:false,\&quot;replaceCardRestricted\&quot;:false,\&quot;activateCardRestricted\&quot;:false,\&quot;travelNoticeRestricted\&quot;:false,\&quot;managePinRestricted\&quot;:false,\&quot;reportLostOrStolenCardRestricted\&quot;:false,\&quot;lockUnlockCardRestricted\&quot;:false},\&quot;commonActionMessage\&quot;:null,\&quot;message\&quot;:\&quot;null\&quot;,\&quot;restriction\&quot;:[{\&quot;message\&quot;:\&quot;\&quot;,\&quot;restrictionType\&quot;:\&quot;MONEY_OUT\&quot;,\&quot;value\&quot;:false},{\&quot;message\&quot;:\&quot;\&quot;,\&quot;restrictionType\&quot;:\&quot;CARD_ORDER\&quot;,\&quot;value\&quot;:false},{\&quot;message\&quot;:\&quot;\&quot;,\&quot;restrictionType\&quot;:\&quot;CARD_CLOSING\&quot;,\&quot;value\&quot;:false},{\&quot;message\&quot;:\&quot;\&quot;,\&quot;restrictionType\&quot;:\&quot;RCB_ZERO\&quot;,\&quot;value\&quot;:false}]},\&quot;numberOfOwners\&quot;:1,\&quot;anyCardHasRestriction\&quot;:false,\&quot;sysMsgs\&quot;:{\&quot;sysMsg\&quot;:[{\&quot;detail\&quot;:\&quot;Daily limit an remaining amount views are currently unavailable. Please try again later.\&quot;,\&quot;source\&quot;:\&quot;Balance\&quot;,\&quot;code\&quot;:\&quot;ACCOUNT_SYSMSG_5000\&quot;,\&quot;type\&quot;:\&quot;error\&quot;}]}}]&quot;}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_5}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">dcm/v2/customers/${customerId}/audit</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="clntSessionId" elementType="Header">
+                  <stringProp name="Header.name">clntSessionId</stringProp>
+                  <stringProp name="Header.value">${authToken}</stringProp>
+                </elementProp>
+                <elementProp name="Pragma" elementType="Header">
+                  <stringProp name="Header.name">Pragma</stringProp>
+                  <stringProp name="Header.value">no-cache</stringProp>
+                </elementProp>
+                <elementProp name="client_ip" elementType="Header">
+                  <stringProp name="Header.name">client_ip</stringProp>
+                  <stringProp name="Header.value">103.203.66.179</stringProp>
+                </elementProp>
+                <elementProp name="Authorization" elementType="Header">
+                  <stringProp name="Header.name">Authorization</stringProp>
+                  <stringProp name="Header.value">Bearer ${__property(apiToken)}</stringProp>
+                </elementProp>
+                <elementProp name="loginRole" elementType="Header">
+                  <stringProp name="Header.name">loginRole</stringProp>
+                  <stringProp name="Header.value">FidCust</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">application/json</stringProp>
+                </elementProp>
+                <elementProp name="Cache-Control" elementType="Header">
+                  <stringProp name="Header.name">Cache-Control</stringProp>
+                  <stringProp name="Header.value">no-cache, no-store, max-age=0</stringProp>
+                </elementProp>
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">application/json</stringProp>
+                </elementProp>
+                <elementProp name="customerId" elementType="Header">
+                  <stringProp name="Header.name">customerId</stringProp>
+                  <stringProp name="Header.value">${customerId}</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="logout page ${username}" enabled="true">
+          <boolProp name="TransactionController.includeTimers">false</boolProp>
+          <boolProp name="TransactionController.parent">true</boolProp>
+        </TransactionController>
+        <hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://apigateway.qa.bnymellon.com/dcm/v2/session/updateStatus" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&quot;sessionId&quot;:&quot;${sessionId}&quot;,&quot;status&quot;:&quot;N&quot;,&quot;updatedBy&quot;:&quot;${customerId}&quot;}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_5}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">dcm/v2/session/updateStatus</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="clntSessionId" elementType="Header">
+                  <stringProp name="Header.name">clntSessionId</stringProp>
+                  <stringProp name="Header.value">${authToken}</stringProp>
+                </elementProp>
+                <elementProp name="Pragma" elementType="Header">
+                  <stringProp name="Header.name">Pragma</stringProp>
+                  <stringProp name="Header.value">no-cache</stringProp>
+                </elementProp>
+                <elementProp name="client_ip" elementType="Header">
+                  <stringProp name="Header.name">client_ip</stringProp>
+                  <stringProp name="Header.value">103.203.66.179</stringProp>
+                </elementProp>
+                <elementProp name="Authorization" elementType="Header">
+                  <stringProp name="Header.name">Authorization</stringProp>
+                  <stringProp name="Header.value">Bearer ${__property(apiToken)}</stringProp>
+                </elementProp>
+                <elementProp name="loginRole" elementType="Header">
+                  <stringProp name="Header.name">loginRole</stringProp>
+                  <stringProp name="Header.value">FidCust</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">application/json</stringProp>
+                </elementProp>
+                <elementProp name="Cache-Control" elementType="Header">
+                  <stringProp name="Header.name">Cache-Control</stringProp>
+                  <stringProp name="Header.value">no-cache, no-store, max-age=0</stringProp>
+                </elementProp>
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">application/json</stringProp>
+                </elementProp>
+                <elementProp name="customerId" elementType="Header">
+                  <stringProp name="Header.name">customerId</stringProp>
+                  <stringProp name="Header.value">${customerId}</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://apigateway.qa.bnymellon.com/dcm/v2/customers/7L0NB1X10259088/audit" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&quot;action&quot;:&quot;Log Out&quot;,&quot;sessionId&quot;:&quot;${sessionId}&quot;}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_5}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">dcm/v2/customers/7L0NB1X10259088/audit</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="clntSessionId" elementType="Header">
+                  <stringProp name="Header.name">clntSessionId</stringProp>
+                  <stringProp name="Header.value">${authToken}</stringProp>
+                </elementProp>
+                <elementProp name="Pragma" elementType="Header">
+                  <stringProp name="Header.name">Pragma</stringProp>
+                  <stringProp name="Header.value">no-cache</stringProp>
+                </elementProp>
+                <elementProp name="client_ip" elementType="Header">
+                  <stringProp name="Header.name">client_ip</stringProp>
+                  <stringProp name="Header.value">103.203.66.179</stringProp>
+                </elementProp>
+                <elementProp name="Authorization" elementType="Header">
+                  <stringProp name="Header.name">Authorization</stringProp>
+                  <stringProp name="Header.value">Bearer ${__property(apiToken)}</stringProp>
+                </elementProp>
+                <elementProp name="loginRole" elementType="Header">
+                  <stringProp name="Header.name">loginRole</stringProp>
+                  <stringProp name="Header.value">FidCust</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">application/json</stringProp>
+                </elementProp>
+                <elementProp name="Cache-Control" elementType="Header">
+                  <stringProp name="Header.name">Cache-Control</stringProp>
+                  <stringProp name="Header.value">no-cache, no-store, max-age=0</stringProp>
+                </elementProp>
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">application/json</stringProp>
+                </elementProp>
+                <elementProp name="customerId" elementType="Header">
+                  <stringProp name="Header.name">customerId</stringProp>
+                  <stringProp name="Header.value">${customerId}</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://qa.fidelitydebitcard.com/logout" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">logout</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="clntSessionId" elementType="Header">
+                  <stringProp name="Header.name">clntSessionId</stringProp>
+                  <stringProp name="Header.value">${authToken}</stringProp>
+                </elementProp>
+                <elementProp name="Pragma" elementType="Header">
+                  <stringProp name="Header.name">Pragma</stringProp>
+                  <stringProp name="Header.value">no-cache</stringProp>
+                </elementProp>
+                <elementProp name="client_ip" elementType="Header">
+                  <stringProp name="Header.name">client_ip</stringProp>
+                  <stringProp name="Header.value">103.203.66.179</stringProp>
+                </elementProp>
+                <elementProp name="Authorization" elementType="Header">
+                  <stringProp name="Header.name">Authorization</stringProp>
+                  <stringProp name="Header.value">Bearer ${__property(apiToken)}</stringProp>
+                </elementProp>
+                <elementProp name="loginRole" elementType="Header">
+                  <stringProp name="Header.name">loginRole</stringProp>
+                  <stringProp name="Header.value">FidCust</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">application/json</stringProp>
+                </elementProp>
+                <elementProp name="Cache-Control" elementType="Header">
+                  <stringProp name="Header.name">Cache-Control</stringProp>
+                  <stringProp name="Header.value">no-cache, no-store, max-age=0</stringProp>
+                </elementProp>
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">application/json</stringProp>
+                </elementProp>
+                <elementProp name="customerId" elementType="Header">
+                  <stringProp name="Header.name">customerId</stringProp>
+                  <stringProp name="Header.value">${customerId}</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://loginxq1.fidelity.com/ftgw/Fas/Fidelity/RtlCust/Logout/Init" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_3}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">ftgw/Fas/Fidelity/RtlCust/Logout/Init</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <boolProp name="HTTPSampler.image_parser">true</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Upgrade-Insecure-Requests" elementType="Header">
+                  <stringProp name="Header.name">Upgrade-Insecure-Requests</stringProp>
+                  <stringProp name="Header.value">1</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+            <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Uniform Random Timer" enabled="true">
+              <stringProp name="RandomTimer.range">62826.0</stringProp>
+              <stringProp name="ConstantTimer.delay">31413</stringProp>
+              <stringProp name="TestPlan.comments">Recorded time was 62826 milliseconds</stringProp>
+            </UniformRandomTimer>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://loginxq1.fidelity.com/assets/20ac1b8fui206372ae87cc1f93128e" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&quot;sensor_data&quot;:&quot;7a74G7m23Vrp0o5c9101041.66-1,2,-94,-100,Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36,uaend,12147,20030107,en-GB,Gecko,3,0,0,0,395053,9122709,1280,680,1280,720,1280,553,1280,,cpen:0,i1:0,dm:0,cwen:0,non:1,opc:0,fc:0,sc:0,wrc:1,isc:0,vib:1,bat:1,x11:0,x12:1,8331,0.411176732205,802799561354,0,loc:-1,2,-94,-101,do_en,dm_en,t_en-1,2,-94,-105,-1,2,-94,-102,-1,2,-94,-108,-1,2,-94,-110,-1,2,-94,-117,-1,2,-94,-111,-1,2,-94,-109,-1,2,-94,-114,-1,2,-94,-103,-1,2,-94,-112,https://loginxq1.fidelity.com/ftgw/Fas/Fidelity/RtlCust/Logout/Init-1,2,-94,-115,1,32,32,0,0,0,0,2,0,1605599122708,-999999,17176,0,0,2862,0,0,7,0,0,8898F3E17EBB250397F1D3EA8751097B~-1~YAAQOVstF0TyMMd1AQAAkFkp1QSe/u0sw8czo/ZlNvPWa36yhc6wvARGHVzXKYpcK0P4gmtc0apw3ROVAOMjmPsCTRwJRAmUiHfdDHB21P45M2zh5qIa6WTfIzTUw4P7BA1DB+fEjTSD9lg1A6k8S+qotU1zRQbjH4w+ZlVKomzD4g1VP+v4qmVuhkGiQKeiHnVrSGtiYY80+P5tfaW3WlGmPK0jwHsW0QJk/eX/aXICnN2OMmCQfjQHXzBpOzHlJ/nzW0WRoAKec/tVO7JJkko4+Oe1XpoZ5/IkI1ekgt1vYmsZ2S10CikKCZGdO1bD4xQ9L13HQln99MPjq8m2ivtT3O+2on1YSWyTMvd8kAcF2NK7hg==~-1~-1~-1,34016,-1,-1,30261693,PiZtE,24408,49-1,2,-94,-106,0,0-1,2,-94,-119,-1-1,2,-94,-122,0,0,0,0,1,0,0-1,2,-94,-123,-1,2,-94,-124,-1,2,-94,-126,-1,2,-94,-127,8-1,2,-94,-70,-1-1,2,-94,-80,94-1,2,-94,-116,27368115-1,2,-94,-118,83408-1,2,-94,-129,-1,2,-94,-121,;9;-1;0&quot;}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_3}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">assets/20ac1b8fui206372ae87cc1f93128e</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <boolProp name="HTTPSampler.image_parser">true</boolProp>
+            <boolProp name="HTTPSampler.concurrentDwn">true</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">text/plain;charset=UTF-8</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">*/*</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://loginxq1.fidelity.com/assets/20ac1b8fui206372ae87cc1f93128e" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&quot;sensor_data&quot;:&quot;7a74G7m23Vrp0o5c9101041.66-1,2,-94,-100,Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36,uaend,12147,20030107,en-GB,Gecko,3,0,0,0,395053,9122709,1280,680,1280,720,1280,553,1280,,cpen:0,i1:0,dm:0,cwen:0,non:1,opc:0,fc:0,sc:0,wrc:1,isc:0,vib:1,bat:1,x11:0,x12:1,8331,0.19661209098,802799561354,0,loc:-1,2,-94,-101,do_en,dm_en,t_en-1,2,-94,-105,-1,2,-94,-102,-1,2,-94,-108,-1,2,-94,-110,-1,2,-94,-117,-1,2,-94,-111,0,86,-1,-1,-1;-1,2,-94,-109,-1,2,-94,-114,-1,2,-94,-103,-1,2,-94,-112,https://loginxq1.fidelity.com/ftgw/Fas/Fidelity/RtlCust/Logout/Init-1,2,-94,-115,1,32,32,86,0,0,86,608,0,1605599122708,92,17176,0,0,2862,0,0,609,86,0,8898F3E17EBB250397F1D3EA8751097B~-1~YAAQOVstF1H2MMd1AQAAnEYq1QRbLSh0RD4IqpGqcH7VhNwcmebk6mfU2+w6NYoM0HsCBEEAuhgFS2F4szTF8oFdaCwKfS3KzPtAgQ4upB7hdSyQDrXSXCBQhzdMyVFgCcA9QqL4bXSQ5DS1F2kuart6yJDG4n3UCAFtVwCXhTvJ2550eZtwOeTtn5fFyicimyDtPVzkeVROshR+qB6aNDr/dbv5u/ppiMVOJKYgu06C1qFTgdRG+NbiHHK17bYrgB/de0WKUSQdiLHxnTAH5wJ6+GIfKomay+TecYCrmwO8cfn41WoBQ0+63WAZsizSqxkheS1iyzoDSpU2ppIYr29dcewXTg/KhsercBhO8IcFfAiUfA==~-1~-1~-1,34601,740,724419348,30261693,PiZtE,95930,73-1,2,-94,-106,9,1-1,2,-94,-119,102,104,109,144,122,533,108,94,91,85,85,84,95,744,-1,2,-94,-122,0,0,0,0,1,0,0-1,2,-94,-123,-1,2,-94,-124,-1,2,-94,-126,-1,2,-94,-127,11321144241322243122-1,2,-94,-70,-1752591854;66351601;dis;,7,8;true;true;true;-330;true;24;24;true;false;-1-1,2,-94,-80,5526-1,2,-94,-116,27368115-1,2,-94,-118,88515-1,2,-94,-129,f9a811b8b59b3105f042b25a8eb024b1d3a535fcd10249efb20ffcfafdb6dca6,1.5,0,,,,0-1,2,-94,-121,;69;13;0&quot;}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_3}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">assets/20ac1b8fui206372ae87cc1f93128e</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <boolProp name="HTTPSampler.image_parser">true</boolProp>
+            <boolProp name="HTTPSampler.concurrentDwn">true</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">text/plain;charset=UTF-8</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">*/*</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://loginxq1.fidelity.com/assets/20ac1b8fui206372ae87cc1f93128e" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&quot;sensor_data&quot;:&quot;7a74G7m23Vrp0o5c9101041.66-1,2,-94,-100,Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36,uaend,12147,20030107,en-GB,Gecko,3,0,0,0,395053,9122709,1280,680,1280,720,1280,553,1280,,cpen:0,i1:0,dm:0,cwen:0,non:1,opc:0,fc:0,sc:0,wrc:1,isc:0,vib:1,bat:1,x11:0,x12:1,8331,0.495886277247,802799561354,0,loc:-1,2,-94,-101,do_en,dm_en,t_en-1,2,-94,-105,-1,2,-94,-102,-1,2,-94,-108,-1,2,-94,-110,0,1,726,851,68;1,1,742,906,86;2,1,758,955,108;3,1,775,1018,125;4,1,792,1061,138;5,1,808,1083,147;6,1,825,1109,163;7,1,842,1115,168;8,1,858,1117,173;9,1,875,1118,174;10,1,1232,1120,174;11,1,1247,1122,175;12,1,1259,1124,176;13,1,1275,1128,177;14,1,1292,1131,179;15,1,1309,1135,181;16,1,1325,1140,184;17,1,1342,1144,186;18,1,1359,1144,187;19,1,1375,1146,188;20,1,1392,1148,190;21,1,1408,1149,190;22,1,1425,1150,192;23,1,1442,1152,194;24,1,1458,1153,195;25,1,1475,1154,197;26,1,1492,1156,199;27,1,1508,1158,201;28,1,1525,1160,202;-1,2,-94,-117,-1,2,-94,-111,0,86,-1,-1,-1;-1,2,-94,-109,0,4259,0.10,4.10,2.60,0.20,8.50,5.60,-1,-1,-1;1,4277,0.10,4.10,2.60,0.20,8.50,5.60,-1,-1,-1;-1,2,-94,-114,-1,2,-94,-103,-1,2,-94,-112,https://loginxq1.fidelity.com/ftgw/Fas/Fidelity/RtlCust/Logout/Init-1,2,-94,-115,1,71572,32,86,8537,0,80163,4277,0,1605599122708,92,17176,0,29,2862,0,0,4280,42763,0,8898F3E17EBB250397F1D3EA8751097B~-1~YAAQOVstF1T2MMd1AQAANUkq1QSIt7LW6Kaxfw6VGtFevHz+KzlY61jiLpHuJp83epUH+FgqSINvDymqk4mkRbNwTN4hAoSON6koGvt8cbjtW1MqUHhycBd58fcpAKDCuybBC0pL8u3BD7JB/lbFDy7bYNBaLgdBVek6yU0bC9v8oZ/24fCZAgt5Q/X+d1p2KOxtY59yhuYTBADSP4r11gtdnE7ORJ0DtpoYteccCDReu2KKFCn+ePB+ZSuYa4PTG8MyQL+szflmQ2wByXm8khscOGzAL5c+yb+29kG+7CVQzGFzQvVZFZm+vzjzimOuK07gVkAmPrMeGg2EDPxp7U9h6RwfHVwFpEzmq+7Mc8No9uC/jg==~-1~-1~-1,34340,740,724419348,30261693,PiZtE,57906,23-1,2,-94,-106,7,2-1,2,-94,-119,102,104,109,144,122,533,108,94,91,85,85,84,95,744,-1,2,-94,-122,0,0,0,0,1,0,0-1,2,-94,-123,-1,2,-94,-124,-1,2,-94,-126,-1,2,-94,-127,11321144241322243122-1,2,-94,-70,-1752591854;66351601;dis;,7,8;true;true;true;-330;true;24;24;true;false;-1-1,2,-94,-80,5526-1,2,-94,-116,27368115-1,2,-94,-118,119951-1,2,-94,-129,f9a811b8b59b3105f042b25a8eb024b1d3a535fcd10249efb20ffcfafdb6dca6,1.5,a712c19fde04cde08d21754c81e951066896404f0eac6cbfd5255e434d879986,,,,0-1,2,-94,-121,;10;13;0&quot;}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_3}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">assets/20ac1b8fui206372ae87cc1f93128e</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <boolProp name="HTTPSampler.image_parser">true</boolProp>
+            <boolProp name="HTTPSampler.concurrentDwn">true</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">text/plain;charset=UTF-8</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">*/*</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="Summary Report" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>
