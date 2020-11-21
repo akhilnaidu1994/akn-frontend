@@ -1,4 +1,4 @@
 export const environment = {
   production: false,
-  baseUrl: 'https://akhilnaidu.tech/api'
+  baseUrl: 'http://akhilnaidu.tech/api'
 };
