@@ -3,15 +3,11 @@
         <div class="items">
             <div class="item">
                 <i class="fas fa-chart-line"></i>
-                <button class="button" mat-button>Dashboard</button>
+                <button class="button" mat-button>Messages</button>
             </div>
             <div class="item">
                 <i class="fas fa-tasks"></i>
-                <button class="button" mat-button>Tasks</button>
-            </div>
-            <div class="item">
-                <i class="fas fa-atlas"></i>
-                <button class="button" mat-button>Projects</button>
+                <button class="button" mat-button>Settings</button>
             </div>
             <div class="item">
                 <i class="fas fa-sign-out-alt"></i>
@@ -20,58 +16,58 @@
         </div>
     </nav>
     <div class="dashboard-content">
-        <div class="dashboard-title">
-            <h2 class="mat-display-1">Dashboard</h2>
+        <div class="search-bar">
+            <i class="fa fa-search"></i>
+            <input type="text" placeholder="Search People & Groups">
         </div>
-        <div class="user-info" *ngIf="user; else errorScreen">
-            <h2 class="mat-subheading-2">Welcome back, {{user.firstName}} </h2>
-            <h4 class="mat-subheading-1">You have 10 task to finish today.</h4>
-            <button mat-raised-button color="primary">check now</button>
-        </div>
-        <div class="projects-content">
-            <div class="heading">
-                <h4 class="mat-subheading-2">Your projects.</h4>
-                <button mat-button class="button">View all</button>
-            </div>
-            <div class="projects">
-                <div class="project-description">
-                    <h3>Implement A</h3>
-                    <span>No of tasks : 3</span>
-                    <p class="project-summary"> {{"Lorem ipsum dolor sit amet" | slice:0:30}}</p>
+        <div class="chats">
+            <div class="chats-list">
+                <div class="search-bar">
+                    <i class="fa fa-search"></i>
+                    <input type="text" placeholder="Search Messages">
                 </div>
-                <div class="project-description">
-                    <h3>Implement B</h3>
-                    <span>No of tasks : 3</span>
-                    <p class="project-summary"> {{"Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat consequatur" | slice:0:40}}</p>
-                </div>
-                <div class="project-description">
-                    <h3>Implement C</h3>
-                    <span>No of tasks : 3</span>
-                    <p class="project-summary"> {{"Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat consequatur" | slice:0:40}}</p>
+                <div class="chat-history">
+                    <div class="chat">
+                        <img src="../../../assets/avatar-male.svg">
+                        <div class="chat-preview">
+                            <span class="name">Akhil Naidu</span>
+                            <span class="last-chat-preview">Hello how are you?</span>
+                        </div>
+                    </div>
+                    <div class="chat">
+                        <img src="../../../assets/avatar-male.svg">
+                        <div class="chat-preview">
+                            <span class="name">Akhil Naidu</span>
+                            <span class="last-chat-preview">Hello how are you?</span>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="projects-content">
-            <div class="heading">
-                <h4 class="mat-subheading-2">Todays tasks.</h4>
-                <button mat-button class="button">View all</button>
-            </div>
-            <div class="projects">
-                <div class="project-description">
-                    <h3>Implement A</h3>
-                    <span>No of tasks : 3</span>
-                    <p class="project-summary"> {{"Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat consequatur" | slice:0:40}}</p>
+            <div class="chats-display">
+                <div class="chat-name">
+                    <img src="../../../assets/avatar-male.svg">
+                    <div class="display-name">
+                        <span >Akhil Naidu</span>
+                        <span class="status"> Online</span>
+                    </div>
                 </div>
-                <div class="project-description">
-                    <h3>Implement B</h3>
-                    <span>No of tasks : 3</span>
-                    <p class="project-summary"> {{"Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat consequatur" | slice:0:40}}</p>
+
+                <div class="chat-discussion">
+                    <ng-scrollbar>
+                        <div class="messages-display">
+                            <div class="message" *ngFor="let chat of messages">
+                                <div [class]="getMessageType(chat)">
+                                    <span>{{chat.message}}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </ng-scrollbar>
+
+                    <div class="message-typing">
+                        <input type="text" [(ngModel)]="message" (keydown.enter)="sendMessage()" placeholder="Type Something ....">
+                    </div>
                 </div>
-                <div class="project-description">
-                    <h3>Implement C</h3>
-                    <span>No of tasks : 3</span>
-                    <p class="project-summary"> {{"Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat consequatur" | slice:0:40}}</p>
-                </div>
+
             </div>
         </div>
     </div>

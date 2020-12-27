@@ -4,3 +4,13 @@ export interface User {
     email: string;
     password: string;
 }
+
+export interface Message {
+    type: TYPE,
+    message: string,
+    time: Date
+}
+
+export enum TYPE {
+    SENDER, RECEIVER
+}
