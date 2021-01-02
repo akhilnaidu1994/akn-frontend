@@ -47,6 +47,14 @@ export class UserService {
     return this.http.get<User>(`${this.baseUrl}/user`);
   }
 
+  public getUserById(userid: string) {
+    return this.http.get<User>(`${this.baseUrl}/user/${userid}`);
+  }
+
+  public searchUsers(searchText: string) {
+    return this.http.get<User[]>(`${this.baseUrl}/user/search/${searchText}`);
+  }
+
   public refreshUserToken() {
 
     const headers = new HttpHeaders();

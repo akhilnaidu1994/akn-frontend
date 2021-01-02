@@ -1,6 +1,8 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { NgScrollbar } from 'ngx-scrollbar';
+import { fromEvent } from 'rxjs';
+import { debounceTime, distinctUntilChanged, filter, pluck, switchMap, tap } from 'rxjs/operators';
 import { Message, TYPE, User } from 'src/app/model/interfaces';
 import { UserService } from 'src/app/services/user.service';
 import { WebsocketService } from 'src/app/services/websocket.service';
@@ -10,14 +12,15 @@ import { WebsocketService } from 'src/app/services/websocket.service';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
 
   user: User;
+  contacts: User[] = [];
   message: string;
-  messages: Message[] = [];
   TYPE = TYPE;
-  lastMessageType: TYPE = null;
-  @ViewChild(NgScrollbar) scrollbarRef: NgScrollbar;
+  @ViewChild(NgScrollbar, { static: false }) scrollbarRef: NgScrollbar;
+  searchResults: User[] = [];
+  selectedContact: User;
 
   constructor(
     private router: Router,
@@ -27,18 +30,28 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this.userService.getUser().subscribe(user => {
       this.user = user;
+      this.websocketService.connect();
     });
 
-    this.messages.push({
-      message: 'how are you',
-      time: new Date(),
-      type: TYPE.RECEIVER
+    this.websocketService.getMessage().subscribe(message => {
+      message.type = TYPE.RECEIVER;
+      const contact = this.contacts.find(contact => contact.id === message.senderId);
+      if (contact) {
+        contact.messages.push(message);
+        this.scrollToBottom();
+      } else {
+        this.userService.getUserById(message.senderId).subscribe(user => {
+          user.messages = [];
+          user.messages.push(message);
+          this.contacts.push(user);
+        });
+      }
     });
-    this.messages.push({
-      message: 'i am fine',
-      time: new Date(),
-      type: TYPE.SENDER
-    });
+
+  }
+
+  ngAfterViewInit() {
+    this.searchPeople();
   }
 
   public logout() {
@@ -50,30 +63,77 @@ export class HomeComponent implements OnInit {
     this.websocketService.connect();
   }
 
-  public sendMessage() {
-    // this.websocketService.sendMessage('akhilnaidu1994@gmail.com', this.message);
-    this.messages.push({
-      message: this.message,
-      time: new Date(),
-      type: TYPE.SENDER
-    });
+  public sendMessage(contact: User) {
+    if (this.message !== "") {
+      const message: Message = {
+        senderId: this.user.id,
+        receiverId: this.selectedContact.id,
+        message: this.message,
+        timestamp: new Date(),
+        type: TYPE.SENDER
+      };
+      this.websocketService.sendMessage(contact.email, JSON.stringify(message));
+      this.selectedContact.messages.push(message);
+      this.message = "";
+      this.scrollToBottom();
+    }
+  }
+
+  private scrollToBottom() {
     this.scrollbarRef.scrollTo({
       bottom: -50
     });
-    this.message = "";
   }
 
-  public getMessageType(message: Message) {
+  public selectUser(user: User) {
+    this.selectedContact = user;
+  }
+
+  public searchPeople() {
+    let searchInput = document.getElementById("search-people");
+    let searchText = "";
+    fromEvent(searchInput, 'input')
+      .pipe(
+        pluck<any, string>('target', 'value'),
+        tap(searchInput => {
+          searchText = searchInput;
+        }),
+        filter(searchTerm => searchTerm.length > 2),
+        debounceTime(800),
+        distinctUntilChanged(),
+        switchMap(searchTerm => this.userService.searchUsers(searchTerm))
+      ).subscribe(data => {
+        this.searchResults = (searchText.length > 2) ? data : [];
+      });
+
+    window.onclick = () => {
+      this.searchResults = [];
+    }
+
+  }
+
+  public getMessageType(message: Message, lastMessage: Message) {
     let messageType = undefined;
     if (message.type === TYPE.RECEIVER) {
-      messageType = this.lastMessageType === TYPE.RECEIVER ? 'receiver' : 'receiver-first';
-      this.lastMessageType = TYPE.RECEIVER
+      messageType = (lastMessage && lastMessage.type === TYPE.RECEIVER) ? 'receiver' : 'receiver-first'
       return messageType
     } else {
-      messageType = this.lastMessageType === TYPE.SENDER ? 'sender' : 'sender-first';
-      this.lastMessageType = TYPE.SENDER;
+      messageType = (lastMessage && lastMessage.type === TYPE.SENDER) ? 'sender' : 'sender-first'
       return messageType;
     }
+  }
+
+  public initiateChat(user: User) {
+    user.messages = [];
+    const exists = this.contacts.map(contact => contact.id).includes(user.id);
+    if (!exists) {
+      this.contacts.push(user);
+      this.selectedContact = user;
+    }
+  }
+
+  ngOnDestroy(): void {
+    this.websocketService.disconnect();
   }
 
 }

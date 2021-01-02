@@ -1,14 +1,18 @@
 export interface User {
+    id?: string;
     firstName: string;
     lastName: string;
     email: string;
+    messages?: Message[];
     password: string;
 }
 
 export interface Message {
+    receiverId: string;
+    senderId: string;
     type: TYPE,
     message: string,
-    time: Date
+    timestamp: Date
 }
 
 export enum TYPE {

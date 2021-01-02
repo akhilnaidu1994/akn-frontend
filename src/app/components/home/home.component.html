@@ -18,7 +18,7 @@
     <div class="dashboard-content">
         <div class="search-bar">
             <i class="fa fa-search"></i>
-            <input type="text" placeholder="Search People & Groups">
+            <input id="search-people" type="text" placeholder="Search People & Groups">
         </div>
         <div class="chats">
             <div class="chats-list">
@@ -26,28 +26,33 @@
                     <i class="fa fa-search"></i>
                     <input type="text" placeholder="Search Messages">
                 </div>
-                <div class="chat-history">
-                    <div class="chat">
+                <div class="search-results" *ngIf="searchResults.length > 0">
+                    <div class="users" (click)="initiateChat(searchResult)" *ngFor="let searchResult of searchResults">
                         <img src="../../../assets/avatar-male.svg">
-                        <div class="chat-preview">
-                            <span class="name">Akhil Naidu</span>
-                            <span class="last-chat-preview">Hello how are you?</span>
-                        </div>
-                    </div>
-                    <div class="chat">
-                        <img src="../../../assets/avatar-male.svg">
-                        <div class="chat-preview">
-                            <span class="name">Akhil Naidu</span>
-                            <span class="last-chat-preview">Hello how are you?</span>
+                        <div class="details">
+                            <span class="name">{{searchResult.firstName}} </span>
+                            <span class="name">{{searchResult.lastName}} </span>
+                            <span class="email">{{searchResult.email}}</span>
                         </div>
                     </div>
                 </div>
+                <div class="chat-history">
+                    <ng-container *ngIf="contacts.length > 0; else noMessages">
+                        <div class="chat" (click)="selectUser(contact)" *ngFor="let contact of contacts">
+                            <img src="../../../assets/avatar-male.svg">
+                            <div class="chat-preview">
+                                <span class="name">{{contact.firstName + " " + contact.lastName}}</span>
+                                <span class="last-chat-preview" *ngIf="contact.messages.length > 0">{{contact.messages[contact.messages.length - 1].message}}</span>
+                            </div>
+                        </div>
+                    </ng-container>
+                </div>
             </div>
-            <div class="chats-display">
+            <div class="chats-display" *ngIf="selectedContact else welcomeMessage">
                 <div class="chat-name">
-                    <img src="../../../assets/avatar-male.svg">
+                    <img class="avatar" src="../../../assets/avatar-male.svg">
                     <div class="display-name">
-                        <span >Akhil Naidu</span>
+                        <span>{{selectedContact.firstName + " " + selectedContact.lastName}}</span>
                         <span class="status"> Online</span>
                     </div>
                 </div>
@@ -55,8 +60,8 @@
                 <div class="chat-discussion">
                     <ng-scrollbar>
                         <div class="messages-display">
-                            <div class="message" *ngFor="let chat of messages">
-                                <div [class]="getMessageType(chat)">
+                            <div class="message" *ngFor="let chat of selectedContact.messages; let i = index">
+                                <div [class]="getMessageType(chat, selectedContact.messages[i - 1])">
                                     <span>{{chat.message}}</span>
                                 </div>
                             </div>
@@ -64,7 +69,7 @@
                     </ng-scrollbar>
 
                     <div class="message-typing">
-                        <input type="text" [(ngModel)]="message" (keydown.enter)="sendMessage()" placeholder="Type Something ....">
+                        <input type="text" [(ngModel)]="message" (keydown.enter)="sendMessage(selectedContact)" placeholder="Type Something ....">
                     </div>
                 </div>
 
@@ -75,4 +80,20 @@
 
 <ng-template #errorScreen>
     <h2 class="mat-subheading-2">We are having some difficulty loading your information </h2>
+</ng-template>
+
+<ng-template #welcomeMessage>
+    <div class="chats-display" *ngIf="user">
+        <img class="work-chat" src="../../../assets/work-chat.svg">
+        <p class="name">Welcome, {{user.firstName + " " + user.lastName}}</p>
+        <p class="sub-heading"> Search people and start chatting....</p>
+
+    </div>
+</ng-template>
+
+<ng-template #noMessages>
+    <div class="no-messages">
+        <img src="../../../assets/empty.svg">
+        <p class="message">No messages to display</p>
+    </div>
 </ng-template>

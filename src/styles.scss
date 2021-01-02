@@ -283,6 +283,7 @@ input:-webkit-autofill:active {
                 padding: 5px;
 
                 .search-bar {
+                    position: relative;
 
                     input {
                         width: 90%;
@@ -307,6 +308,47 @@ input:-webkit-autofill:active {
                         top: 17px;
                         left: 20px;
                     }
+                }
+
+                .search-results {
+                    position: absolute;
+                    background-color: #FFFFFF;
+                    width: 45%;
+                    top: 10%;
+                    border-radius: 5px;
+                    box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.5);
+                    z-index: 5;
+
+                    .users {
+                        padding: 10px;
+                        cursor: pointer;
+
+                        img {
+                            height: 35px;
+                            width: 35px;
+                            display: inline-block;
+                        }
+
+                        .details {
+                            display: inline-block;
+                            margin-left: 10px;
+
+                            .name {
+                                display: inline-block;
+                                margin-right: 5px;
+                            }
+
+                            .email {
+                                display: block;
+                            }
+                        }
+                    }
+
+                    :hover {
+                        background-color: #78909C;
+                    }
+
+
                 }
 
                 .chat-history {
@@ -366,7 +408,7 @@ input:-webkit-autofill:active {
                     padding: 10px;
                     margin: 10px;
 
-                    img {
+                    .avatar {
                         height: 35px;
                         width: 35px;
                         display: inline;
@@ -427,7 +469,7 @@ input:-webkit-autofill:active {
                             float: left;
                             right: 20px;
                             color: #ffffff;
-                            left: 20px;
+                            left: 10px;
                         }
 
                         .sender-first {
@@ -490,4 +532,44 @@ input:-webkit-autofill:active {
 
     }
 
+}
+
+.chats-display {
+    padding: 20px;
+
+    .name {
+        font-size: 25px;
+        margin-top: 35px;
+        margin-left: auto;
+        margin-right: auto;
+        opacity: 0.8;
+    }
+
+    .sub-heading {
+        font-size: 14px;
+        margin-left: auto;
+        margin-right: auto;
+        opacity: .6;
+    }
+
+    .work-chat {
+        margin-top: 30px;
+        height: 60%;
+        width: 100%;
+    }
+}
+
+.no-messages {
+
+    .message {
+        display: block;
+        text-align: center;
+        padding: 10px;
+        opacity: 0.8;
+    }
+
+    img {
+        width: 100%;
+        margin-top: 50px;
+    }
 }
