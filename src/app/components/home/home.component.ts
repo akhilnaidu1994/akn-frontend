@@ -135,6 +135,8 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
 
   public initiateChat(user: User) {
     console.log("cliced");
+    this.hideChatHistory = true;
+    this.hideChatDisplay = false;
     user.messages = [];
     const exists = this.contacts.map(contact => contact.id).includes(user.id);
     if (!exists) {

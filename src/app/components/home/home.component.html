@@ -50,7 +50,7 @@
             </div>
             <div class="chats-display hide-display" [class.hide-display]="hideChatDisplay" *ngIf="selectedContact else welcomeMessage">
                 <div class="chat-name">
-                    <i class="back-arrow fas fa-arrow-left"></i>
+                    <i (click)="hideChatHistory= false; hideChatDisplay = true" class="back-arrow fas fa-arrow-left"></i>
                     <img class="avatar" src="../../../assets/avatar-male.svg">
                     <div class="display-name">
                         <span>{{selectedContact.firstName + " " + selectedContact.lastName}}</span>
