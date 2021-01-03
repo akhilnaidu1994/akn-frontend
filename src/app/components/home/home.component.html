@@ -21,7 +21,7 @@
             <input id="search-people" type="text" placeholder="Search People & Groups">
         </div>
         <div class="chats">
-            <div class="chats-list">
+            <div class="chats-list" [class.hide-display]="hideChatHistory">
                 <div class="search-bar">
                     <i class="fa fa-search"></i>
                     <input type="text" placeholder="Search Messages">
@@ -36,20 +36,21 @@
                         </div>
                     </div>
                 </div>
-                <div class="chat-history">
+                <div class="chat-history" (click)="hideChatHistory= true; hideChatDisplay = false">
                     <ng-container *ngIf="contacts.length > 0; else noMessages">
-                        <div class="chat" (click)="selectUser(contact)" *ngFor="let contact of contacts">
+                        <div class="chat" [class.bold-font-weight]="contact.newChat" (click)="selectUser(contact)" *ngFor="let contact of contacts">
                             <img src="../../../assets/avatar-male.svg">
                             <div class="chat-preview">
                                 <span class="name">{{contact.firstName + " " + contact.lastName}}</span>
-                                <span class="last-chat-preview" *ngIf="contact.messages.length > 0">{{contact.messages[contact.messages.length - 1].message}}</span>
+                                <span class="last-chat-preview" *ngIf="contact.messages.length > 0">{{contact.messages[contact.messages.length - 1].message | slice:0:15}}</span>
                             </div>
                         </div>
                     </ng-container>
                 </div>
             </div>
-            <div class="chats-display" *ngIf="selectedContact else welcomeMessage">
+            <div class="chats-display hide-display" [class.hide-display]="hideChatDisplay" *ngIf="selectedContact else welcomeMessage">
                 <div class="chat-name">
+                    <i class="back-arrow fas fa-arrow-left"></i>
                     <img class="avatar" src="../../../assets/avatar-male.svg">
                     <div class="display-name">
                         <span>{{selectedContact.firstName + " " + selectedContact.lastName}}</span>
@@ -83,7 +84,7 @@
 </ng-template>
 
 <ng-template #welcomeMessage>
-    <div class="chats-display" *ngIf="user">
+    <div class="chats-display" [class.hide-display]="hideChatDisplay" *ngIf="user">
         <img class="work-chat" src="../../../assets/work-chat.svg">
         <p class="name">Welcome, {{user.firstName + " " + user.lastName}}</p>
         <p class="sub-heading"> Search people and start chatting....</p>

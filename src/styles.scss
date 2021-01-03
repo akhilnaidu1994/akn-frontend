@@ -17,6 +17,10 @@ body {
     display: none !important;
 }
 
+.ng-scroll-content {
+    display: block !important;
+}
+
 /* Change the white to any color ;) */
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
@@ -38,6 +42,10 @@ input:-webkit-autofill:active {
 /**
 * Login component CSS styles
 */
+
+.bold-font-weight {
+    font-weight: 500;
+}
 
 .login-container {
     height: 80vh;
@@ -204,23 +212,24 @@ input:-webkit-autofill:active {
     display: flex;
     align-items: flex-start;
     height: 100vh;
-    background-color: #eee;
+    background-color: #ededed;
+    flex-direction: column;
 
 
     .dashboard-side {
-        height: 95%;
+        height: 10vh;
         background-color: #673ab7;
-        border-radius: 10px;
-        flex-basis: 15%;
+        width: 100%;
         align-self: center;
-        margin-left: 10px;
         display: flex;
         align-items: center;
         justify-content: center;
         box-shadow: 0px 0px 5px -2px rgba(0, 0, 0, 0.2);
 
         .items {
-            height: 35vh;
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
 
             .item {
                 color: #FFFFFF;
@@ -239,10 +248,12 @@ input:-webkit-autofill:active {
         flex-basis: 85%;
         align-self: center;
         height: 95vh;
+        width: 100%;
 
         .search-bar {
             height: 10vh;
             position: relative;
+            margin-top: 10px;
 
             i {
                 font-size: 1.4em;
@@ -253,13 +264,13 @@ input:-webkit-autofill:active {
             }
 
             input {
-                width: 75%;
+                width: 95%;
                 height: 40%;
                 border-radius: 10px;
                 border: none;
                 padding: 23px;
-                margin: 0px 20px;
-                padding-left: 40px;
+                margin: 0px 10px;
+                padding-left: 50px;
                 font-size: 15px;
             }
 
@@ -275,9 +286,9 @@ input:-webkit-autofill:active {
             justify-content: center;
 
             .chats-list {
-                flex-basis: 25%;
+                flex-basis: 95%;
                 background-color: #FFFFFF;
-                height: 85vh;
+                height: 75vh;
                 border-radius: 10px;
                 margin: 0px 10px;
                 padding: 5px;
@@ -313,8 +324,8 @@ input:-webkit-autofill:active {
                 .search-results {
                     position: absolute;
                     background-color: #FFFFFF;
-                    width: 45%;
-                    top: 10%;
+                    width: 60%;
+                    top: 20%;
                     border-radius: 5px;
                     box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.5);
                     z-index: 5;
@@ -366,18 +377,12 @@ input:-webkit-autofill:active {
                             .name {
                                 display: block;
                                 margin-left: 15px;
-                                opacity: .7;
                             }
 
                             .last-chat-preview {
                                 display: block;
                                 margin-left: 15px;
                                 font-size: 12px;
-                                opacity: .7;
-                            }
-
-                            .new-chat {
-                                opacity: 1;
                             }
                         }
                     }
@@ -395,11 +400,11 @@ input:-webkit-autofill:active {
             }
 
             .chats-display {
-                flex-basis: 70%;
+                flex-basis: 90%;
                 display: flex;
                 flex-direction: column;
                 background-color: #FFFFFF;
-                height: 85vh;
+                height: 77vh;
                 border-radius: 10px;
 
                 .chat-name {
@@ -407,6 +412,14 @@ input:-webkit-autofill:active {
                     border-bottom: 2px solid #eee;
                     padding: 10px;
                     margin: 10px;
+
+                    .back-arrow {
+                        display: inline-block;
+                        vertical-align: top;
+                        margin: 13px 10px;
+                        opacity: 0.7;
+                        cursor: pointer;
+                    }
 
                     .avatar {
                         height: 35px;
@@ -429,7 +442,7 @@ input:-webkit-autofill:active {
 
                 .chat-discussion {
                     padding: 10px;
-                    height: 63vh;
+                    height: 76%;
 
                     .messages-display {
                         display: flex;
@@ -446,6 +459,8 @@ input:-webkit-autofill:active {
                             right: 20px;
                             color: #ffffff;
                             left: 10px;
+                            max-width: 70%;
+                            overflow-wrap: break-word;
                         }
 
                         .receiver-first::after {
@@ -470,6 +485,8 @@ input:-webkit-autofill:active {
                             right: 20px;
                             color: #ffffff;
                             left: 10px;
+                            max-width: 70%;
+                            overflow-wrap: break-word;
                         }
 
                         .sender-first {
@@ -483,6 +500,8 @@ input:-webkit-autofill:active {
                             right: 20px;
                             color: #ffffff;
                             right: 20px;
+                            max-width: 70%;
+                            overflow-wrap: break-word;
                         }
 
                         .sender {
@@ -496,6 +515,8 @@ input:-webkit-autofill:active {
                             right: 20px;
                             color: #ffffff;
                             right: 20px;
+                            max-width: 70%;
+                            overflow-wrap: break-word;
                         }
 
                         .sender-first::after {
@@ -528,14 +549,90 @@ input:-webkit-autofill:active {
                     }
                 }
             }
+
+            .hide-display {
+                display: none;
+            }
         }
 
     }
 
 }
 
+@media (min-width: 780px) {
+    .dashboard-main {
+        flex-direction: row;
+
+        .dashboard-side {
+            flex-basis: 15%;
+            height: 95%;
+            border-radius: 10px;
+            min-width: 120px;
+            margin-left: 10px;
+
+            .items {
+                height: 35vh;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-start;
+            }
+        }
+
+        .dashboard-content {
+            .search-bar {
+                margin-top: 0px;
+
+                input {
+                    width: 75%;
+                    margin: 0px 20px;
+                    padding-left: 40px;
+                }
+            }
+
+            .chats {
+
+                .hide-display {
+                    display: block;
+                }
+
+                .chats-list {
+                    flex-basis: 25%;
+                    height: 85vh;
+                    height: 85vh;
+
+                    .search-results {
+                        width: 45%;
+                        top: 10%;
+                    }
+                }
+
+                .chats-display {
+                    display: flex;
+                    flex-basis: 70%;
+                    height: 85vh;
+
+                    .chat-name {
+
+                        .back-arrow {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .no-messages {
+
+        img {
+            width: 100%;
+            margin-top: 50px;
+        }
+    }
+}
+
 .chats-display {
-    padding: 20px;
 
     .name {
         font-size: 25px;
@@ -560,6 +657,7 @@ input:-webkit-autofill:active {
 }
 
 .no-messages {
+    text-align: center;
 
     .message {
         display: block;
@@ -569,7 +667,6 @@ input:-webkit-autofill:active {
     }
 
     img {
-        width: 100%;
-        margin-top: 50px;
+        width: 50%;
     }
 }

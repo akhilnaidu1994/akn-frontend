@@ -5,6 +5,7 @@ export interface User {
     email: string;
     messages?: Message[];
     password: string;
+    newChat?: boolean;
 }
 
 export interface Message {
