@@ -19,7 +19,7 @@ export class JwtInterceptorService implements HttpInterceptor {
 
     return next.handle(request)
       .pipe(catchError(error => {
-        if (error.status === 403) {
+        if (error.status === 403 && !request.url.includes("/login")) {
           return this.refreshToken(request, next);
         }
         return throwError(error);

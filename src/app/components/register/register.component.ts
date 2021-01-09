@@ -10,6 +10,7 @@ import {
 } from "@angular/forms";
 import { MatSnackBar, MatSnackBarHorizontalPosition, MatSnackBarVerticalPosition } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
+import { map } from "rxjs/operators";
 import { User } from 'src/app/model/interfaces';
 import { UserService } from 'src/app/services/user.service';
 
@@ -53,10 +54,15 @@ export class RegisterComponent implements OnInit {
   private horizontalPosition: MatSnackBarHorizontalPosition = 'center';
   private verticalPosition: MatSnackBarVerticalPosition = 'bottom';
 
+
   ngOnInit(): void {
+    this.email.valueChanges
+      .pipe(map(value => value.trim()))
+      .pipe(map(value => value.toLowerCase()))
+      .subscribe(value => this.email.patchValue(value, { emitEvent: false }));
   }
 
-  onSubmit(formDirective: FormGroupDirective) {
+  onSubmit() {
     if (this.registerForm.valid) {
 
       const user: User = {
@@ -67,7 +73,7 @@ export class RegisterComponent implements OnInit {
       }
 
       this.userService.registerUser(user).subscribe(registeredUser => {
-        this.resetForm(formDirective);
+        this.resetForm();
         this.openSnackBar("Registration Successful. You can login now");
         this.router.navigate(['/login']);
       }, err => {
@@ -89,8 +95,7 @@ export class RegisterComponent implements OnInit {
     });
   }
 
-  resetForm(formDirective: FormGroupDirective) {
-    formDirective.resetForm();
+  resetForm() {
     this.registerForm.reset();
   }
 

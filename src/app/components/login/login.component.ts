@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AbstractControl, FormBuilder, Validators } from '@angular/forms';
 import { MatSnackBar, MatSnackBarHorizontalPosition, MatSnackBarVerticalPosition } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
+import { map } from 'rxjs/operators';
 import { UserService } from 'src/app/services/user.service';
 
 @Component({
@@ -26,6 +27,11 @@ export class LoginComponent implements OnInit {
   private verticalPosition: MatSnackBarVerticalPosition = 'bottom';
 
   ngOnInit(): void {
+    this.email.valueChanges
+      .pipe(
+        map(value => value.trim()),
+        map(value => value.toLowerCase())
+      ).subscribe(value => this.email.patchValue(value, { emitEvent: false }));
   }
 
   onSubmit() {
